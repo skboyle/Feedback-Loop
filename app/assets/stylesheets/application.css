@@ -13,3 +13,76 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Rozha+One');
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+body {
+  font-family: 'Rozha One', serif;
+}
+
+/*body {
+  font-family: 'Open Sans', sans-serif;
+}*/
+
+.home-index {
+  border-style: dashed;
+  border-color: black;
+  border-width: thin;
+}
+
+.song-container {
+  margin: 5px;
+  border-style: dashed;
+  border-color: black;
+  border-width: thin;
+}
+
+.song-tile {
+  margin: 5px;
+  border-style: dashed;
+  border-color: black;
+  border-width: thin;
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+}
+.song-tile-image {
+  width: 200px;
+  height: 200px;
+
+}
+
+.song-show-info {
+  margin: 5px;
+  border-style: dashed;
+  border-color: black;
+  border-width: thin;
+  width: 250px;
+  margin: 5px;
+}
+
+.song-show-page {
+  border-style: dashed;
+  border-color: black;
+  border-width: thin;
+}
+
+.feedback-form {
+  border-style: dashed;
+  border-color: black;
+  border-width: thin;
+  margin: 5px;
+}
+
+.feedback-tile {
+  margin: 5px;
+  border-style: dashed;
+  border-color: black;
+  border-width: thin;
+  width: 500px;
+  margin: 5px;
+}

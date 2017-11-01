@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FeedbackLoop</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'index.js' %>
+
+  </head>
+
+  <body>
+    <%= yield %>
+    <h1>Feedback Loop</h1>
+    <div class="flasherror">
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+      <%= flash[:ommiauth_spotify_force_approval?] %>
+    </div>
+
+    <div classname="signinlinks">
+    <% if current_user %>
+      Welcome <%= current_user.name %>!
+      <%= link_to "Sign Out", signout_path %>
+    <% else %>
+      <%= link_to 'Sign in with Spotify', '/auth/spotify' %>
+    <% end %>
+    </div>
+
+    <div id='app'/>
+
+  </body>
+</html>
