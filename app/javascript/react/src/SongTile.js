@@ -8,7 +8,7 @@ const SongTile = props => {
       <div className="Song-tile-name">
         <Link to= {`/songs/${props.song.id}`}>
           <img className="song-tile-image" src={`${props.song.image_url}`} alt={`Picture of ${props.song.name}`}/>
-          <h3 className="song-name"><strong>{props.song.name}:</strong> {props.song.user.id}</h3>
+          <h3 className="song-name"><strong>'{props.song.name}' by {props.song.artist_name}</strong></h3>
         </Link>
       </div>
     </div>

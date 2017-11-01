@@ -44,7 +44,6 @@ class SongShowPage extends React.Component{
 
 
  addNewFeedback(payLoad) {
-   console.log(this.state)
   let id = this.props.params.id
   fetch(`/api/v1/songs/${id}/feedbacks`, {
     credentials: 'same-origin',
@@ -53,14 +52,23 @@ class SongShowPage extends React.Component{
     body: JSON.stringify(payLoad)
   })
   .then(response => response.json())
+  .then (body =>{
+    // let feedback = body
+    // console.log(body)
+    return body
+  })
   .then(responseData =>{
-    console.log(responseData)
-    this.setState({ feedbacks: [responseData.feedback, ...this.state.feedbacks] })
+    // try using .concat
+    // debugger;
+    this.setState({ feedbacks: this.state.feedbacks.concat(responseData) })
+    // console.log([responseData, ...this.state.feedbacks])
+    // debugger;
   })
  }
 
 
   render() {
+
     let addNewFeedback = (payLoad) => this.addNewFeedback(payLoad)
     let feedbacks = this.state.feedbacks.map(feedback => {
       return(
@@ -74,6 +82,7 @@ class SongShowPage extends React.Component{
           />
       )
     })
+
     return(
       <div className="song-show-page">
         <FeedbackForm
@@ -85,6 +94,7 @@ class SongShowPage extends React.Component{
         <SongShowInfo
           key={this.state.song.id}
           name={this.state.song.name}
+          artist_name={this.state.song.artist_name}
           genre={this.state.song.genre}
           description={this.state.song.description}
           image_url={this.state.song.image_url}

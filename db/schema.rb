@@ -58,10 +58,11 @@ ActiveRecord::Schema.define(version: 20171030232631) do
 
   create_table "songs", force: :cascade do |t|
     t.string "name", null: false
+    t.string "artist_name", null: false
     t.string "genre", null: false
     t.text "description", null: false
     t.string "song_url", null: false
-    t.string "image_url"
+    t.string "image_url", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

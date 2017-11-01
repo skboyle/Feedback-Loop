@@ -1,5 +1,5 @@
 class FeedbackSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :song, :structure, :style, :mixdown, :username
+  attributes :id, :user_id, :song_id, :structure, :style, :mixdown, :username
 
   def username
     object.user.name

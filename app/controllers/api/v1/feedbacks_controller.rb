@@ -3,7 +3,7 @@ class Api::V1::FeedbacksController < ApplicationController
 
   def create
     feedback = JSON.parse(request.body.read)
-    @new_feedback = Feedback.new(
+    new_feedback = Feedback.create(
       style: feedback["style"],
       structure: feedback["structure"],
       mixdown: feedback["mixdown"],
@@ -11,11 +11,8 @@ class Api::V1::FeedbacksController < ApplicationController
       user_id: feedback["user_id"]
     )
 
-    if @new_feedback.save
-      render json: @new_feedback
-    else
-      render json: {error: "Sorry, your feedback didn't save!"}
-    end
+
+    render json:  new_feedback 
   end
 
 end

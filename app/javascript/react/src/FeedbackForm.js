@@ -1,5 +1,6 @@
 import React from 'react'
 import TextAreaFormItem from './TextAreaFormItem'
+import ErrorBox from './ErrorBox'
 
 class FeedbackForm extends React.Component {
   constructor(props) {
@@ -21,6 +22,40 @@ class FeedbackForm extends React.Component {
     this.setState({[field]: newValue})
   }
 
+  validateContent(selection) {
+    let errors = []
+
+    if (this.state.structure === ""){
+      errors.push("Structure feedback must be at least 50 characters. ")
+    }
+
+    if (this.state.mixdown === ""){
+      errors.push("Mixdown feedback must be at least 50 characters. ")
+    }
+
+    if (this.state.style === ""){
+      errors.push("Style feedback must be at least 50 characters. ")
+    }
+
+    this.setState({errors: errors})
+
+    if (errors.length){
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  validateSubmit(event){
+    event.preventDefault();
+    if(this.validateContent() === false) {
+      console.log('bad form');
+      return false;
+    }
+
+    this.feedbackFormSubmit(event)
+    this.handleClearForm(event)
+  }
 
 
   handleClearForm(event) {
@@ -29,11 +64,11 @@ class FeedbackForm extends React.Component {
       structure: '',
       mixdown: '',
       style: '',
+      errors: []
     })
   }
 
   feedbackFormSubmit(event){
-    console.log(this.state)
     event.preventDefault();
     let Payload = {
       style: this.state.style,
@@ -47,11 +82,17 @@ class FeedbackForm extends React.Component {
 
 
   render() {
-    let handleSubmit = (event) => this.feedbackFormSubmit(event)
+    let handleSubmit = (event) => this.validateSubmit(event)
+    let errors;
+    if(this.state.errors.length) {
+     errors = <ErrorBox errors={this.state.errors} />
+   }
 
     return (
       <form className="feedback-form" id="feedback-form">
-
+        <div>
+          {errors}
+        </div>
         <TextAreaFormItem
           name="structure"
           content={this.state.structure}
@@ -72,9 +113,7 @@ class FeedbackForm extends React.Component {
           nameText="Style"
           handler={this.handleChange}
         />
-        <div>
 
-        </div>
         <input type="submit" className="button" value="Submit " onClick={handleSubmit} />
       </form>
     )

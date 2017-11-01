@@ -38,6 +38,7 @@ user5 = User.create(user_list[4])
 
 song_list = [
   {name: "Song1",
+  artist_name: "Cool Buddy",
   genre: "House",
   description: "This discription will repeat over and over and over again.",
   song_url: "https://soundcloud.com/stream",
@@ -45,6 +46,7 @@ song_list = [
   user_id: 1
   },
   {name: "Song2",
+  artist_name: "DJ Seed",
   genre: "Disco",
   description: "This discription will repeat over and over and over again.",
   song_url: "https://soundcloud.com/stream",
@@ -52,6 +54,7 @@ song_list = [
   user_id: 1
   },
   {name: "Song3",
+  artist_name: "Artist Formerly Known As Seed",
   genre: "Electro",
   description: "This discription will repeat over and over and over again.",
   song_url: "https://soundcloud.com/stream",
@@ -59,6 +62,7 @@ song_list = [
   user_id: 2
   },
   {name: "Song4",
+  artist_name: "MC SEED",
   genre: "Techno",
   description: "This discription will repeat over and over and over again.",
   song_url: "https://soundcloud.com/stream",
@@ -66,6 +70,7 @@ song_list = [
   user_id: 2
   },
   {name: "Song5",
+  artist_name: "Lil' Seed",
   genre: "Soul",
   description: "This discription will repeat over and over and over again.",
   song_url: "https://soundcloud.com/stream",

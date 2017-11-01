@@ -3,7 +3,9 @@ class Api::V1::UserController < ApplicationController
 
   def is_signed_in?
     if current_user
-      render :json => {"signed_in" => true, "user" => current_user}
+      songs = User.find(current_user.id).songs
+      feedbacks = User.find(current_user.id).feedbacks
+      render :json => {"signed_in" => true, "user" => current_user, "songs" => songs, "feedbacks" => feedbacks}
     else
       render :json => {"signed_in" => false}
     end
