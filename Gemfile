@@ -9,7 +9,7 @@ gem 'foundation-rails'
 gem 'webpacker'
 gem 'omniauth-spotify'
 gem 'active_model_serializers'
-
+gem 'jquery-rails'
 
 group :development do
   gem 'listen', '~> 3.0.5'

@@ -7,4 +7,8 @@ class Feedback < ApplicationRecord
   validates :style, presence: true, length: { in: 1...5000 }
   validates :mixdown, presence: true, length: { in: 1...5000 }
 
+  def vote_total
+    upvotes.reduce(0) {|sum, upvote| sum += upvote.vote}
+  end
+
 end

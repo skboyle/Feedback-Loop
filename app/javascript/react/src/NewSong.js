@@ -45,8 +45,8 @@ class NewSong extends React.Component{
       errors.push("Please select a genre ")
     }
 
-    if (this.state.description === ""){
-      errors.push("Please include a description. ")
+    if (this.state.description.length < 50 ){
+      errors.push("Description must be at least 50 characters long. ")
     }
 
     if (this.state.song_url === ""){

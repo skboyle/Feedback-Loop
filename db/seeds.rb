@@ -143,16 +143,16 @@ upvote9 = Upvote.create(user_id: 3, feedback_id: 3, vote: 1 )
 upvote10 = Upvote.create(user_id: 4, feedback_id: 2, vote: 1 )
 
 
-favorite1 = Favorite.create(user_id: 1, song_id: 1)
-favorite2 = Favorite.create(user_id: 1, song_id: 2)
-favorite3 = Favorite.create(user_id: 1, song_id: 3)
-favorite4 = Favorite.create(user_id: 2, song_id: 1)
-favorite5 = Favorite.create(user_id: 2, song_id: 2)
-favorite6 = Favorite.create(user_id: 2, song_id: 3)
-favorite7 = Favorite.create(user_id: 3, song_id: 1)
-favorite8 = Favorite.create(user_id: 3, song_id: 3)
-favorite9 = Favorite.create(user_id: 4, song_id: 1)
-favorite10 = Favorite.create(user_id: 4, song_id: 3)
+favorite1 = Favorite.create(user_id: 1, song_id: 1, heart: 1)
+favorite2 = Favorite.create(user_id: 1, song_id: 2, heart: 1)
+favorite3 = Favorite.create(user_id: 1, song_id: 3, heart: 1)
+favorite4 = Favorite.create(user_id: 2, song_id: 1, heart: 1)
+favorite5 = Favorite.create(user_id: 2, song_id: 2, heart: 1)
+favorite6 = Favorite.create(user_id: 2, song_id: 3, heart: 1)
+favorite7 = Favorite.create(user_id: 3, song_id: 1, heart: 1)
+favorite8 = Favorite.create(user_id: 3, song_id: 3, heart: 1)
+favorite9 = Favorite.create(user_id: 4, song_id: 1, heart: 1)
+favorite10 = Favorite.create(user_id: 4, song_id: 3, heart: 1)
 
 album_list = [
   { user_id: 1,

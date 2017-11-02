@@ -8,4 +8,9 @@ class Song < ApplicationRecord
   validates :name, presence: true
   validates :artist_name, presence: true
   validates :song_url, presence: true
+
+  def heart_total
+    favorites.reduce(0) {|sum, favorite| sum += favorite.heart}
+  end
+
 end

@@ -12,6 +12,15 @@ const SongShowInfo = props => {
       <h4>Genre: {props.genre}</h4>
       <a target="_blank" href={props.song_url}>Listen</a>
       <p> {props.description}</p>
+      <button
+        className="button"
+        type="button"
+        name="upvote"
+        value="1"
+        id={props.id}
+        onClick={props.handler}>
+        ♥{props.heart_total}
+      </button>
 
       </div>
   )

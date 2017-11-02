@@ -1,6 +1,6 @@
 import React from 'react';
 import SongTile from './SongTile'
-import Grid from 'react-css-grid'
+
 
 const SongContainer = props => {
   let songs = props.songs.map(song => {
@@ -14,6 +14,7 @@ const SongContainer = props => {
       </div>
     )
   })
+
   return(
     <div className="song-container">
       <h2>New Songs (Song Container)</h2>
@@ -23,5 +24,6 @@ const SongContainer = props => {
     </div>
   );
 }
+
 
 export default SongContainer

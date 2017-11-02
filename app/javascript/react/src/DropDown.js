@@ -4,24 +4,24 @@ import React from 'react';
 
 const DropDown = props => {
   let genres = [["","Select a Genre"],
-  ["AM","Ambient & Experimental"],
-  ["CL","Classical"],
-  ["CO","Country"],
-  ["DI","Disco & Funk"],
-  ["DA","Drum & Bass"],
-  ["ED","EDM & DubStep"],
-  ["EL","Electronic"],
-  ["HA","House & Tehcno"],
-  ["HI","Hip Hop"],
-  ["IN","Indie"],
-  ["JA","Jazz"],
-  ["LA","Latin"],
-  ["ME","Metal"],
-  ["PU","Punk"],
-  ["PO","Pop"],
-  ["RA","R&B & Soul"],
-  ["RO","Rock"],
-  ["WO","World"]]
+  ["Ambient & Experimental","Ambient & Experimental"],
+  ["Classical","Classical"],
+  ["Country","Country"],
+  ["Disco & Funk","Disco & Funk"],
+  ["Drum & Bass","Drum & Bass"],
+  ["EDM & DubStep","EDM & DubStep"],
+  ["Electronic","Electronic"],
+  ["House & Tehcno","House & Tehcno"],
+  ["Hip Hop","Hip Hop"],
+  ["Indie","Indie"],
+  ["Jazz","Jazz"],
+  ["Latin","Latin"],
+  ["Metal","Metal"],
+  ["Punk","Punk"],
+  ["Pop","Pop"],
+  ["R&B & Soul","R&B & Soul"],
+  ["Rock","Rock"],
+  ["World","World"]]
 
   let genreOptions = genres.map(genre => {
     return(

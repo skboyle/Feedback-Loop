@@ -25,16 +25,16 @@ class FeedbackForm extends React.Component {
   validateContent(selection) {
     let errors = []
 
-    if (this.state.structure === ""){
-      errors.push("Structure feedback must be at least 50 characters. ")
+    if (this.state.structure.lenght < 50){
+      errors.push("Structure feedback must be at least 50 characters long. ")
     }
 
-    if (this.state.mixdown === ""){
-      errors.push("Mixdown feedback must be at least 50 characters. ")
+    if (this.state.mixdown.lenght < 50){
+      errors.push("Mixdown feedback must be at least 50 characters long. ")
     }
 
-    if (this.state.style === ""){
-      errors.push("Style feedback must be at least 50 characters. ")
+    if (this.state.style.lenght < 50){
+      errors.push("Style feedback must be at least 50 characters long. ")
     }
 
     this.setState({errors: errors})

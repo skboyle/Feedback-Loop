@@ -7,11 +7,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:index, :show]
+      resources :users, only: [:index, :show, :destroy]
       resources :feedbacks, only: [:create]
-      resources :songs, only: [:index, :show, :create] do
+      resources :songs, only: [:index, :show, :create, :edit, :destroy] do
         resources :feedbacks, only: [:create]
       end
+      resources :upvotes, only: [:create]
+      resources :favorites, only: [:create]
 
       scope :user do
         get 'is_signed_in', to: 'user#is_signed_in?'
@@ -20,12 +22,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/songs/:id', to: 'static_pages#index'
-
-  resources :songs do
-    resources :feedbacks, except: [:index, :show]
-  end
 
   resources :users, only: [:show]
 
+  get '*path', to: 'static_pages#index'
 end
