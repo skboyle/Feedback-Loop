@@ -12,9 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation
  */
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Rozha+One');
+/*// @import "foundation_and_overrides";*/
 
 h1 {
   font-family: 'Pacifico', cursive;
@@ -86,4 +89,9 @@ body {
   border-width: thin;
   width: 500px;
   margin: 5px;
+}
+
+.feedbackloop a {
+  color: black;
+  text-decoration: none;
 }

@@ -1,7 +1,5 @@
 source 'https://rubygems.org/'
 
-gem 'dotenv-rails', groups: [:development, :test]
-
 gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
@@ -21,6 +19,7 @@ end
 
 group :development, :test do
   gem 'capybara'
+  gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'launchy', require: false
   gem 'pry-rails'
