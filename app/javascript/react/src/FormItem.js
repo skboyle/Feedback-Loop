@@ -4,7 +4,7 @@ const FormItem = props => {
   return(
 
 <div>
-  <label name={props.name}>{props.nameText}</label>
+  <label name={props.name}>{props.nameText}</label><br/>
   <input type="text"
     id={props.name}
     value={props.content}

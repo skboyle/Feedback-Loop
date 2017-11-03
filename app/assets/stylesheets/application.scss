@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require foundation
+ *= require_tree .
+ *= require_self
+
+ */
+@import 'foundation';
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Rozha+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+
+/*// @import "foundation_and_overrides";*/
+// @include foundation-grid;
+//@include flex-grid-column($columns, $gutters);
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  margin: 2px
+}
+
+h4 {
+  margin: 2px
+}
+
+hr {
+  width: 95%;
+  color: black;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  margin: 0px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+a:hover{
+  color: grey;
+}
+
+p {
+  margin: 10px;
+}
+
+select{
+  width:200px;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0px;
+  background-color: white;
+}
+
+input[type=text] {
+  width: 200px;
+}
+
+textarea {
+  width: 200px;
+  resize: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .input-group-rounded {
+    margin: 0% 10%;
+  }
+}
+
+.red {
+  background-color: red;
+}

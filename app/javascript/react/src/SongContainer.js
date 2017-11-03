@@ -3,9 +3,9 @@ import SongTile from './SongTile'
 
 
 const SongContainer = props => {
-  let songs = props.songs.map(song => {
+  let songs = props.songs.reverse().map(song => {
     return(
-      <div className="row">
+      <div className="small-6 large-3 columns">
         <SongTile
           key={song.id}
           song={song}
@@ -17,10 +17,9 @@ const SongContainer = props => {
 
   return(
     <div className="song-container">
-      <h2>New Songs (Song Container)</h2>
-      <ul>
+      <div className="row">
         {songs}
-      </ul>
+      </div>
     </div>
   );
 }

@@ -12,24 +12,19 @@
   <body>
     <%= yield %>
     <div class="rails-nav">
-
-    <h1 class="feedbackloop"><%= link_to "Feedback Loop!", root_path %> </h1>
-
     <div class="flasherror">
       <%= flash[:notice] %>
       <%= flash[:alert] %>
       <%= flash[:ommiauth_spotify_force_approval?] %>
     </div>
-
     <div classname="signinlinks">
     <% if current_user %>
-      Welcome <%= current_user.name %>!
+      <b><%= current_user.name %></b> |
       <%= link_to "Sign Out", signout_path %>
     <% else %>
       <%= link_to 'Sign in with Spotify', '/auth/spotify' %>
     <% end %>
     </div>
-
   </div>
 
     <div id='app'/>

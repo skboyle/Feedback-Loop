@@ -28,14 +28,15 @@ const DropDown = props => {
       <option key={genre[0]} value={genre[0]}>{genre[1]}</option>
     )
   })
+
   return(
 
-<div>
-  <label name={props.name}>{props.nameText}</label>
-  <select onChange={props.handler} name={props.name} value={props.content}>
-    {genreOptions}
-  </select>
-</div>
+    <div>
+      <label name={props.name}>{props.nameText}</label><br/>
+      <select onChange={props.handler} name={props.name} value={props.content}>
+        {genreOptions}
+      </select>
+    </div>
 
   )
 

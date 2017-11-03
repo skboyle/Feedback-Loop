@@ -7,17 +7,30 @@ const NavBar = props => {
 
   return(
     <div className="nav-bar">
-      <h1>Feedback Loop!</h1>
         <Link to= {`/`}>
-      <h2>Home</h2>
+      <h1>Feedback Loop</h1>
         </Link>
 
-        <Link to= {`/signout/`}>
-      <h2>Sing Out</h2>
-        </Link>
-
+    <div className="my-links">
+    <div className="link-my-tracks">
+      <Link to= {`/user`}>
+        <h4>My Tracks</h4>
+      </Link>
     </div>
-  )
+
+    <div className="link-favorites">
+      <h4>Favorites</h4>
+    </div>
+
+    <div className="link-feed">
+      <Link to= {`/`}>
+        <h4>Feed</h4>
+      </Link>
+    </div>
+  </div>
+    {props.children}
+</div>
+)
 }
 
 export default NavBar;

@@ -4,11 +4,13 @@ import { Link } from 'react-router';
 const SongTile = props => {
 
   return(
-    <div id="song-tile" className="small-2 columns">
-      <div className="Song-tile-name">
+    <div id="song-tile" className="song-tile">
+      <div className="container">
         <Link to= {`/songs/${props.song.id}`}>
-          <img className="song-tile-image" src={`${props.song.image_url}`} alt={`Picture of ${props.song.name}`}/>
-          <h3 className="song-name"><strong>'{props.song.name}' by {props.song.artist_name}</strong></h3>
+          <img className="image" src={`${props.song.image_url}`} alt={`Picture of ${props.song.name}`}/>
+          <div className="overlay" >
+          <div className="text">'{props.song.name}' by {props.song.artist_name}</div>
+          </div>
         </Link>
       </div>
     </div>

@@ -116,6 +116,7 @@ class NewSong extends React.Component{
 
     return (
       <form className="site-form" id="song-form">
+        <h3>Add A Song</h3>
         <div>
           {errors}
         </div>

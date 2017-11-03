@@ -90,6 +90,7 @@ class FeedbackForm extends React.Component {
 
     return (
       <form className="feedback-form" id="feedback-form">
+        <h3>Give Feedback</h3>
         <div>
           {errors}
         </div>
@@ -98,6 +99,7 @@ class FeedbackForm extends React.Component {
           content={this.state.structure}
           nameText="Structure"
           handler={this.handleChange}
+          formText="Like my flow?"
         />
 
         <TextAreaFormItem
@@ -105,6 +107,7 @@ class FeedbackForm extends React.Component {
           content={this.state.mixdown}
           nameText="Mixdown"
           handler={this.handleChange}
+          formText="How are my levels?"
         />
 
         <TextAreaFormItem
@@ -112,6 +115,7 @@ class FeedbackForm extends React.Component {
           content={this.state.style}
           nameText="Style"
           handler={this.handleChange}
+          formText="Feeling the vibe?"
         />
 
         <input type="submit" className="button" value="Submit " onClick={handleSubmit} />
