@@ -29,13 +29,11 @@ class HomeIndex extends React.Component{
 
     return(
       <div className="home-index">
+        <NavBar/>
 
-        <h2>Home Index</h2>
-        <div className="row" >
         <SongContainer
           songs={this.state.songs}
         />
-      </div>
       </div>
     )
   }

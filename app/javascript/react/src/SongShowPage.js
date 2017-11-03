@@ -3,6 +3,7 @@ import FeedbackForm from './FeedbackForm'
 import SongShowInfo from './SongShowInfo'
 import FeedbackContainer from './FeedbackContainer'
 import FeedbackTile from './FeedbackTile'
+import NavBar from './NavBar'
 
 class SongShowPage extends React.Component{
   constructor(props) {
@@ -10,13 +11,39 @@ class SongShowPage extends React.Component{
     this.state = {
       feedbacks: [],
       song: [],
-      currentUser: []
+      currentUser: [],
+      favorites: [],
+      buttonclass: []
     }
     this.addNewFeedback = this.addNewFeedback.bind(this)
     this.handleVote = this.handleVote.bind(this)
     this.favoriteHandler = this.favoriteHandler.bind(this)
+    // this.checkButtonClass = this.checkButtonClass.bind(this)
 
   }
+
+  // checkButtonClass(event) {
+  //   let buttonclass;
+  //   console.log(this.state.currentUser)
+  //   console.log(this.state.favorites)
+  //   let favs = this.state.favorites
+  //   let color = false
+  //   let favcolors = favs.map(fav=>{
+  //     if (fav.user_id == this.state.currentUser.id && fav.heart = 1){
+  //       color = true}
+  //     }else{
+  //       color = false}
+  //     }
+  //   })
+  //   if (color = true){
+  //     this.setState({ buttonClass: "red" })
+  //   }
+
+  //   // if (this.state.favorites.users.includes(this.state.currentUser)){
+  //   //   this.setState({ buttonclass: "red"})
+  //   // }else{
+  //   //   this.setState({ buttonclass: "button"})}
+  // }
 
   componentDidMount() {
     fetch('/api/v1/user/is_signed_in.json', {
@@ -39,8 +66,8 @@ class SongShowPage extends React.Component{
     .then(body => {
       let song = body
       let feedbacks = song.feedbacks;
-      this.setState({feedbacks: feedbacks, song: song})
-
+      let favorites = song.favorites;
+      this.setState({feedbacks: feedbacks, song: song, favorites: favorites})
     })
   }
 
@@ -58,8 +85,8 @@ class SongShowPage extends React.Component{
     })
     .then(response => response.json())
     .then(responseData =>{
-     this.setState({ feedbacks: responseData })
-   })
+      this.setState({ feedbacks: responseData })
+    })
   }
 
   favoriteHandler(event) {
@@ -76,8 +103,9 @@ class SongShowPage extends React.Component{
     })
     .then(response => response.json())
     .then(responseData =>{
-     this.setState({ song: responseData })
-   })
+      this.setState({ song: responseData, favorites: responseData.favorites })
+    })
+    // this.checkButtonClass(event)
   }
 
 
@@ -101,52 +129,68 @@ class SongShowPage extends React.Component{
 
 
   render() {
-    let favoriteHandler = (event) => this.favoriteHandler(event)
-    let handleVote = (event) => this.voteHandler(event)
-    let addNewFeedback = (payLoad) => this.addNewFeedback(payLoad)
-    let feedbacks = this.state.feedbacks.map(feedback => {
+
+      let favoriteHandler = (event) => this.favoriteHandler(event)
+      let handleVote = (event) => this.voteHandler(event)
+      let addNewFeedback = (payLoad) => this.addNewFeedback(payLoad)
+      let feedbacks = this.state.feedbacks.map(feedback => {
+        return(
+
+          <FeedbackTile
+            key={feedback.id}
+            id={feedback.id}
+            structure={feedback.structure}
+            mixdown={feedback.mixdown}
+            style={feedback.style}
+            user={feedback.username}
+            currentUser={this.state.currentUser}
+            voteHandler={this.handleVote}
+            voteTotal={feedback.vote_total}
+          />
+        )
+      })
+
       return(
+        <div className="full-show-page">
+          <NavBar/>
+          <div className="row">
+            <div className="small-3 columns">
+              <div className="song-home-margin">
+                <SongShowInfo
+                  key={this.state.song.id}
+                  id={this.state.song.id}
+                  name={this.state.song.name}
+                  artist_name={this.state.song.artist_name}
+                  genre={this.state.song.genre}
+                  description={this.state.song.description}
+                  image_url={this.state.song.image_url}
+                  song_url={this.state.song.song_url}
+                  heart_total={this.state.song.heart_total}
+                  username={this.state.song.username}
+                  handler={this.favoriteHandler}
+                  currentUser={this.state.currentUser.id}
+                  buttonclass={this.state.buttonclass}
+                />
+              </div>
+              <div className="feedback-form-div">
+                <FeedbackForm
+                  addNewFeedback={this.addNewFeedback}
+                  currentSong={this.state.song.id}
+                  currentUser={this.state.currentUser.id}
+                />
+              </div>
+            </div>
 
-        <FeedbackTile
-          key={feedback.id}
-          id={feedback.id}
-          structure={feedback.structure}
-          mixdown={feedback.mixdown}
-          style={feedback.style}
-          user={feedback.username}
-          currentUser={this.state.currentUser}
-          voteHandler={this.handleVote}
-          voteTotal={feedback.vote_total}
-        />
+            <div className="small-3 large-6 columns">
+              <div className="feedback-scroll">
+
+                {feedbacks}
+              </div>
+            </div>
+          </div>
+        </div>
+
       )
-    })
-
-    return(
-      <div className="song-show-page">
-        <FeedbackForm
-          addNewFeedback={this.addNewFeedback}
-          currentSong={this.state.song.id}
-          currentUser={this.state.currentUser.id}
-        />
-
-        <SongShowInfo
-          key={this.state.song.id}
-          id={this.state.song.id}
-          name={this.state.song.name}
-          artist_name={this.state.song.artist_name}
-          genre={this.state.song.genre}
-          description={this.state.song.description}
-          image_url={this.state.song.image_url}
-          song_url={this.state.song.song_url}
-          heart_total={this.state.song.heart_total}
-          username={this.state.song.username}
-          handler={this.favoriteHandler}
-        />
-
-        {feedbacks}
-
-      </div>
-    )
+    }
   }
-}
-export default SongShowPage;
+  export default SongShowPage;

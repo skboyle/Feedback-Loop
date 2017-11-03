@@ -1,0 +1,48 @@
+.rails-nav{
+  align-self: right;
+  float: right;
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-right: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+  display: inline-block;
+  background-color: none;
+  height: 20px
+
+}
+
+.nav-bar{
+  width: 20%;
+  margin-left: 10px;
+  float: left;
+  margin-bottom: none;
+}
+.not-nav{
+  float: right;
+}
+
+.link-feed a {
+  margin: 0px;
+  color: black;
+
+}
+
+.link-my-tracks a {
+  margin: 0px;
+  color: black;
+
+}
+
+.link-favorites {
+  margin: 0px;
+  color: black;
+
+}
+
+.my-links{
+  border-left-color: black;
+  border-left-style: solid;
+  border-left-width: thin;
+  padding-left: 5px;
+}
