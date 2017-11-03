@@ -12,7 +12,7 @@ class HomeIndex extends React.Component{
  }
 
  componentDidMount() {
-   fetch('http://localhost:3000/api/v1/songs', {
+   fetch('/api/v1/songs', {
      credentials: 'same-origin',
      method: 'GET',
      headers: { 'Content-Type': 'application/json' }
