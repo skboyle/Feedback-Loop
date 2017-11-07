@@ -9,7 +9,10 @@ const SongTile = props => {
         <Link to= {`/songs/${props.song.id}`}>
           <img className="image" src={`${props.song.image_url}`} alt={`Picture of ${props.song.name}`}/>
           <div className="overlay" >
-          <div className="text">'{props.song.name}' by {props.song.artist_name}</div>
+            <div className="text"><p>'{props.song.name}'</p>
+              <p> by </p>
+              <p>{props.song.artist_name}</p>
+            </div>
           </div>
         </Link>
       </div>

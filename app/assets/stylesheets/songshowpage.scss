@@ -1,0 +1,56 @@
+.song-home-margin{
+  height: 100%;
+  width: 80%;
+  align-items: center;
+  display: inline-block;
+  overflow-y: scroll;
+  align-self: right;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1300px) {
+    .song-home-margin {
+        position: fixed;
+    }
+}
+
+
+.song-show-info {
+  width: 200px;
+}
+
+.song-show-info p {
+  margin: 2px
+}
+
+.song-show-info a {
+  margin: 2px;
+  color: blue;
+  text-decoration: underline;
+  font-style: bold;
+}
+
+.user-quote {
+  text-align: right;
+  margin: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.feedback-form{
+
+}
+
+.feedback-info {
+    display: inline-block;
+    text-align: left;
+    margin-top: 0px;
+}
+
+.feedback-scroll{
+  display: inline-block;
+  overflow-y: scroll;
+  height: 95%;
+}

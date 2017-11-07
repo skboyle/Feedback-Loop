@@ -5,7 +5,7 @@ const ErrorBox = ({ errors }) => {
     return <li key={error}>{error}</li>
   })
   return (
-    <div className='panel alert'>
+    <div className='panel-alert'>
       <h4>Errors</h4>
       <ul>
         {errorElements}

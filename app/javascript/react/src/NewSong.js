@@ -38,19 +38,27 @@ class NewSong extends React.Component{
     let errors = []
 
     if (this.state.name === ""){
-      errors.push("Name field can't be blank. ")
+      errors.push("• Name field can't be blank. ")
     }
 
     if (this.state.genre === ""){
-      errors.push("Please select a genre ")
+      errors.push("• Please select a genre ")
     }
 
     if (this.state.description.length < 50 ){
-      errors.push("Description must be at least 50 characters long. ")
+      errors.push("• Description must be at least 50 characters long. ")
     }
 
     if (this.state.song_url === ""){
-      errors.push("Link to song must be present. ")
+      errors.push("• Link to song must be present. ")
+    }
+
+    if (this.props.feedbacks.length / this.props.songs.length <= 3){
+      errors.push("• Your feedback ratio is too low. Give more feedback! ")
+    }
+
+    if (this.props.rating < 3){
+      errors.push("• Your feedback rating is too low. Give more feedback! ")
     }
 
 
@@ -102,7 +110,6 @@ class NewSong extends React.Component{
     if (SongPayload.image_url == "") {
       SongPayload.image_url = "http://freevector.co/wp-content/uploads/2014/06/54450-music-black-circular-button.png"
     }
-    console.log(SongPayload)
     this.props.addNewSong(SongPayload);
   }
 
@@ -132,6 +139,7 @@ class NewSong extends React.Component{
           content={this.state.artist_name}
           nameText="Artist Name:"
           handler={this.handleChange}
+          formText="Use full URL"
         />
 
         <DropDown
@@ -146,6 +154,7 @@ class NewSong extends React.Component{
           content={this.state.song_url}
           nameText="Song URL:"
           handler={this.handleChange}
+          formText="Use full URL"
         />
 
         <FormItem
@@ -153,6 +162,7 @@ class NewSong extends React.Component{
           content={this.state.image_url}
           nameText="Image URL:"
           handler={this.handleChange}
+          formText="Use full URL (Optional)"
         />
 
         <TextAreaFormItem
@@ -160,6 +170,7 @@ class NewSong extends React.Component{
           content={this.state.description}
           nameText="Description:"
           handler={this.handleChange}
+          formText="Tell us about your song. What would you like help on?"
         />
 
         <input type="submit" className="button" value="Submit " onClick={handleSubmit} />

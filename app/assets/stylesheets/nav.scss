@@ -8,15 +8,20 @@
   white-space: nowrap;
   display: inline-block;
   background-color: none;
-  height: 20px
-
+  height: 20px;
+  right: 0;
+  top: 0;
+  position: fixed;
+  background: rgba(54, 25, 25, .0);
 }
 
 .nav-bar{
-  width: 20%;
+  width: 250px;
   margin-left: 10px;
   float: left;
   margin-bottom: none;
+  overflow: hidden;
+  top: 0;
 }
 .not-nav{
   float: right;
@@ -45,4 +50,16 @@
   border-left-style: solid;
   border-left-width: thin;
   padding-left: 5px;
+}
+
+@media screen and (min-width: 1300px) {
+    .nav-bar {
+        position: sticky;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .nav-bar {
+        width: 100%;
+    }
 }

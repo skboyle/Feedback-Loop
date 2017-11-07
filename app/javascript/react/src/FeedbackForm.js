@@ -25,16 +25,20 @@ class FeedbackForm extends React.Component {
   validateContent(selection) {
     let errors = []
 
-    if (this.state.structure.lenght < 50){
-      errors.push("Structure feedback must be at least 50 characters long. ")
+    if (this.state.structure.length < 50){
+      errors.push("• Structure feedback must be at least 50 characters long. ")
     }
 
-    if (this.state.mixdown.lenght < 50){
-      errors.push("Mixdown feedback must be at least 50 characters long. ")
+    if (this.state.mixdown.length < 50){
+      errors.push("• Mixdown feedback must be at least 50 characters long. ")
     }
 
-    if (this.state.style.lenght < 50){
-      errors.push("Style feedback must be at least 50 characters long. ")
+    if (this.state.style.length < 50){
+      errors.push("• Style feedback must be at least 50 characters long. ")
+    }
+
+    if(this.props.currentUser.id == this.props.currentSong.user.id){
+      errors.push("• You cannot review your own song. ")
     }
 
     this.setState({errors: errors})
@@ -74,8 +78,8 @@ class FeedbackForm extends React.Component {
       style: this.state.style,
       structure: this.state.structure,
       mixdown: this.state.mixdown,
-      song_id: this.props.currentSong,
-      user_id: this.props.currentUser
+      song_id: this.props.currentSong.id,
+      user_id: this.props.currentUser.id
     }
     this.props.addNewFeedback(Payload);
   }

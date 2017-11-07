@@ -1,51 +1,6 @@
-.home-index {
-
-}
-
-
-.song-tile {
-  margin: 10rem;
-
-}
-.song-tile-image {
+.panel-alert{
   width: 200px;
-  height: 200px;
-
-}
-
-.song-show-info {
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 200px;
-}
-
-.song-show-info p {
-  margin: 2px
-}
-
-.song-show-info a {
-  margin: 2px;
-  text-decoration: underline;
-  font-style: bold;
-}
-.song-show-page {
-
-
-}
-
-.user-quote {
-  text-align: right;
-  margin: 0px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.feedback-form {
-  margin-left: 10px;
-}
-
-.feedback-tile {
-
+  color: red
 }
 
 .feedbackloop a {
@@ -53,27 +8,12 @@
   text-decoration: none;
 }
 
-.feedback-info {
-    display: inline-block;
-    text-align: left;
-    margin-top: 0px;
+#red {
+  color: red;
 }
 
-.site-form {
-  margin-top: 50px;
-}
-
-.my-songs{
-  margin-top: 50px;
-}
-
-.feedback-scroll{
-  margin-top: 50px;
-  overflow-y: scroll;
-  height: 700px;
-}
-
-.song-home-margin{
-  margin-top: 65px;
-
+#access {
+  margin: 0px;
+  padding: 0px;
+  width: 200px;
 }

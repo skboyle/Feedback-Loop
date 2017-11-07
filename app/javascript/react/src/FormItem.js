@@ -9,7 +9,9 @@ const FormItem = props => {
     id={props.name}
     value={props.content}
     name={props.name}
-    onChange={props.handler} />
+    onChange={props.handler}
+    placeholder={props.formText}
+    />
 </div>
 
   )

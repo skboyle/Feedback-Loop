@@ -9,11 +9,12 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:index, :show, :destroy]
       resources :feedbacks, only: [:create]
+      resources :favorites, only: [:index, :create]
       resources :songs, only: [:index, :show, :create, :edit, :destroy] do
         resources :feedbacks, only: [:create]
       end
       resources :upvotes, only: [:create]
-      resources :favorites, only: [:create]
+
 
       scope :user do
         get 'is_signed_in', to: 'user#is_signed_in?'
