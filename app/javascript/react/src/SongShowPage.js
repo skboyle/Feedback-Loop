@@ -4,6 +4,7 @@ import SongShowInfo from './SongShowInfo'
 import FeedbackContainer from './FeedbackContainer'
 import FeedbackTile from './FeedbackTile'
 import NavBar from './NavBar'
+import Access from './Access'
 
 class SongShowPage extends React.Component{
   constructor(props) {
@@ -18,32 +19,9 @@ class SongShowPage extends React.Component{
     this.addNewFeedback = this.addNewFeedback.bind(this)
     this.handleVote = this.handleVote.bind(this)
     this.favoriteHandler = this.favoriteHandler.bind(this)
-    // this.checkButtonClass = this.checkButtonClass.bind(this)
 
   }
 
-  // checkButtonClass(event) {
-  //   let buttonclass;
-  //   console.log(this.state.currentUser)
-  //   console.log(this.state.favorites)
-  //   let favs = this.state.favorites
-  //   let color = false
-  //   let favcolors = favs.map(fav=>{
-  //     if (fav.user_id == this.state.currentUser.id && fav.heart = 1){
-  //       color = true}
-  //     }else{
-  //       color = false}
-  //     }
-  //   })
-  //   if (color = true){
-  //     this.setState({ buttonClass: "red" })
-  //   }
-
-  //   // if (this.state.favorites.users.includes(this.state.currentUser)){
-  //   //   this.setState({ buttonclass: "red"})
-  //   // }else{
-  //   //   this.setState({ buttonclass: "button"})}
-  // }
 
   componentDidMount() {
     fetch('/api/v1/user/is_signed_in.json', {
@@ -71,27 +49,32 @@ class SongShowPage extends React.Component{
     })
   }
 
+
   handleVote(event) {
-    let payLoad = {
-      feedback_id: parseInt(event.target.id),
-      user_id: this.state.currentUser.id,
-      vote: parseInt(event.target.value)
+    if (event.target.name == this.state.currentUser.id){
+      console.log('You cannot vote on your own feedback.')
+    } else{
+      let payLoad = {
+        feedback_id: parseInt(event.target.id),
+        user_id: this.state.currentUser.id,
+        vote: parseInt(event.target.value)
+      }
+      fetch(`/api/v1/upvotes`, {
+        credentials: 'same-origin',
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payLoad)
+      })
+      .then(response => response.json())
+      .then(responseData =>{
+        this.setState({ feedbacks: responseData })
+      })
     }
-    fetch(`/api/v1/upvotes`, {
-      credentials: 'same-origin',
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payLoad)
-    })
-    .then(response => response.json())
-    .then(responseData =>{
-      this.setState({ feedbacks: responseData })
-    })
   }
 
   favoriteHandler(event) {
     let payLoad = {
-      song_id: parseInt(event.target.id),
+      song_id: parseInt(event.target.name),
       user_id: this.state.currentUser.id,
       heart: parseInt(event.target.value)
     }
@@ -105,7 +88,6 @@ class SongShowPage extends React.Component{
     .then(responseData =>{
       this.setState({ song: responseData, favorites: responseData.favorites })
     })
-    // this.checkButtonClass(event)
   }
 
 
@@ -127,18 +109,18 @@ class SongShowPage extends React.Component{
     })
   }
 
-
   render() {
-
       let favoriteHandler = (event) => this.favoriteHandler(event)
       let handleVote = (event) => this.voteHandler(event)
       let addNewFeedback = (payLoad) => this.addNewFeedback(payLoad)
+
       let feedbacks = this.state.feedbacks.map(feedback => {
         return(
 
           <FeedbackTile
             key={feedback.id}
             id={feedback.id}
+            userid={feedback.user_id}
             structure={feedback.structure}
             mixdown={feedback.mixdown}
             style={feedback.style}
@@ -150,12 +132,14 @@ class SongShowPage extends React.Component{
         )
       })
 
+      if (this.state.currentUser) {
       return(
-        <div className="full-show-page">
+        <div>
           <NavBar/>
+          <div className="song-home-margin">
           <div className="row">
-            <div className="small-3 columns">
-              <div className="song-home-margin">
+            <div className="small-8 medium-6 large-3 columns">
+
                 <SongShowInfo
                   key={this.state.song.id}
                   id={this.state.song.id}
@@ -169,19 +153,17 @@ class SongShowPage extends React.Component{
                   username={this.state.song.username}
                   handler={this.favoriteHandler}
                   currentUser={this.state.currentUser.id}
-                  buttonclass={this.state.buttonclass}
+                  favorites={this.state.favorites}
+
                 />
-              </div>
-              <div className="feedback-form-div">
                 <FeedbackForm
                   addNewFeedback={this.addNewFeedback}
-                  currentSong={this.state.song.id}
-                  currentUser={this.state.currentUser.id}
+                  currentSong={this.state.song}
+                  currentUser={this.state.currentUser}
                 />
-              </div>
-            </div>
 
-            <div className="small-3 large-6 columns">
+            </div>
+            <div className="small-8 medium-8 large-8 columns">
               <div className="feedback-scroll">
 
                 {feedbacks}
@@ -189,8 +171,49 @@ class SongShowPage extends React.Component{
             </div>
           </div>
         </div>
-
+      </div>
       )
+    } else {
+
+      return(
+        <div>
+          <NavBar/>
+          <div className="song-home-margin">
+          <div className="row">
+            <div className="small-8 medium-6 large-3 columns">
+
+                <SongShowInfo
+                  key={this.state.song.id}
+                  id={this.state.song.id}
+                  name={this.state.song.name}
+                  artist_name={this.state.song.artist_name}
+                  genre={this.state.song.genre}
+                  description={this.state.song.description}
+                  image_url={this.state.song.image_url}
+                  song_url={this.state.song.song_url}
+                  heart_total={this.state.song.heart_total}
+                  username={this.state.song.username}
+                  handler={this.favoriteHandler}
+                  // currentUser={this.state.currentUser.id}
+                  favorites={this.state.favorites}
+
+                />
+                <Access
+                  text="Log in to give feedback"
+                />
+
+            </div>
+            <div className="small-8 medium-8 large-8 columns">
+              <div className="feedback-scroll">
+
+                {feedbacks}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      )
+    }
     }
   }
   export default SongShowPage;

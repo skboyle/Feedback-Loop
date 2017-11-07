@@ -19,4 +19,14 @@ class User < ApplicationRecord
   def admin?
     role == "admin"
   end
+
+  def rating
+    ratingTotal = 0
+    self.feedbacks.each do |feedback|
+      ratingTotal += feedback.vote_total
+    end
+
+  return ratingTotal
+  end
+
 end

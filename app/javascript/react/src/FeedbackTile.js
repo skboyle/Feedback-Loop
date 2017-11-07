@@ -9,25 +9,25 @@ const FeedbackTile = props => {
       <div className="feedback-text">
         <p><b>Structure: </b>{props.structure}</p>
         <p><b>SMixdown: </b>{props.mixdown} </p>
-        <p><b>SStyle: </b>{props.style} </p>
+        <p><b>Style: </b>{props.style} </p>
         <p className="user-quote"> - {props.user}</p>
           <p className="feedback-info">
             <b></b>   {props.voteTotal}
       <button
         className="button"
         type="button"
-        name="upvote"
         value="1"
         id={props.id}
+        name={props.userid}
         onClick={props.voteHandler}>
         ▲
       </button>
       <button
         className="button"
         type="button"
-        name="downvote"
         value="-1"
         id={props.id}
+        name={props.userid}
         onClick={props.voteHandler}>
         ▼
       </button>

@@ -19,12 +19,20 @@ const NavBar = props => {
     </div>
 
     <div className="link-favorites">
+      <Link to= {`/favorites`}>
       <h4>Favorites</h4>
+      </Link>
     </div>
 
     <div className="link-feed">
       <Link to= {`/`}>
         <h4>Feed</h4>
+      </Link>
+    </div>
+
+    <div className="link-info">
+      <Link to= {`/info`}>
+        <h4>Info</h4>
       </Link>
     </div>
   </div>
