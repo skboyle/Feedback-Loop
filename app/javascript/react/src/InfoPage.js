@@ -32,7 +32,7 @@ class InfoPage extends React.Component{
         <NavBar/>
         <div className="info-page">
           <div className="row" >
-            <div className="small-12 medium-12 large-12 columns">
+            <div className="small-10  medium-12 large-9 large-offset-2 columns">
               <InfoContainer/>
             </div>
           </div>

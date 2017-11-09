@@ -1,16 +1,38 @@
 .info-page{
   height: 100%;
-  width: 20%;
+  width: 70%;
   align-items: center;
   display: inline-block;
   overflow-y: scroll;
-  align-self: right;
+  align-self: inherit;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   margin-top: 30px;
+  font-size: 1.25em;
 }
 
-.info-tile{
-  width: 400px;
+.info-page p {
+  margin-left: 4px;
+}
+
+#info-tile{
+width: 70%
+}
+
+@media screen and (max-width: 600px) {
+    #info-tile {
+        width: 100%;
+        word-wrap: break-word;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .info-page {
+          font-size: 1em;
+          width:95%;
+          position:inherit;
+          align-content: center;
+    }
 }

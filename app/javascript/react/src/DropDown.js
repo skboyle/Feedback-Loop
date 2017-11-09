@@ -25,7 +25,7 @@ const DropDown = props => {
 
   let genreOptions = genres.map(genre => {
     return(
-      <option key={genre[0]} value={genre[0]}>{genre[1]}</option>
+      <option classname="option-style" key={genre[0]} value={genre[0]}>{genre[1]}</option>
     )
   })
 

@@ -1,19 +1,53 @@
 .user-home-page{
   height: 90%;
-  width: 80%;
-  align-items: center;
+  width: 70%;
+  // align-items: center;
   display: inline-block;
-  overflow-y: scroll;
-  align-self: right;
+  align-self: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+  font-size: 14px;
 }
 
-.site-form {
-
+@media screen and (min-width: 1300px) {
+    .user-home-page {
+        position: fixed;
+    }
 }
 
-.my-songs{
+@media screen and (max-width: 1030px) {
+    .user-home-page {
+      width: 90%;
+    }
+}
 
+
+@media screen and (max-width: 600px) {
+    .user-home-page {
+        // margin: auto;
+        // position:inherit;
+    }
+}
+
+.user-song-container{
+  width: 70%;
+  margin: auto;
+  align-self: center;
+}
+
+@media screen and (max-width: 1030px) {
+    .user-song-container {
+      width: 50%;
+      margin: auto;
+      align-self: center;
+    }
+}
+@media screen and (max-width: 650px) {
+    .user-song-container {
+      width: 90%;
+      margin: auto;
+      align-self: center;
+      position:inherit;
+    }
 }

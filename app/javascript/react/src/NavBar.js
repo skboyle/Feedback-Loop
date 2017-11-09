@@ -7,9 +7,11 @@ const NavBar = props => {
 
   return(
     <div className="nav-bar">
+    <div className="home-link">
         <Link to= {`/`}>
       <h1>Feedback Loop</h1>
         </Link>
+    </div>
 
     <div className="my-links">
     <div className="link-my-tracks">

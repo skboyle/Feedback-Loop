@@ -85,7 +85,7 @@ class UserHomePage extends React.Component{
         <div className="user-home-page">
 
           <div className="row">
-            <div className="small-8 medium-6 large-3 columns">
+            <div className="small-10 small-offset-1 medium-3 medium-offset-0 large-3 large-offset-0 columns ">
               <NewSong
                 addNewSong={this.addNewSong}
                 currentUser={this.state.currentUser}
@@ -95,10 +95,12 @@ class UserHomePage extends React.Component{
 
               />
             </div>
-            <div className="small-8 medium-8 large-8 columns">
+            <div className="user-song-container">
+            <div className="columns">
               <HomeSongContainer
                 songs={this.state.songs}
               />
+            </div>
             </div>
           </div>
         </div>

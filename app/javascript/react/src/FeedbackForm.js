@@ -1,6 +1,7 @@
 import React from 'react'
 import TextAreaFormItem from './TextAreaFormItem'
 import ErrorBox from './ErrorBox'
+import FormItem from './FormItem'
 
 class FeedbackForm extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class FeedbackForm extends React.Component {
       structure: '',
       mixdown: '',
       style: '',
+      recomendations: '',
       errors: []
     }
     this.handleChange = this.handleChange.bind(this);
@@ -25,17 +27,20 @@ class FeedbackForm extends React.Component {
   validateContent(selection) {
     let errors = []
 
-    if (this.state.structure.length < 50){
-      errors.push("• Structure feedback must be at least 50 characters long. ")
+    if (this.state.structure.length > 500 ||
+      this.state.mixdown.length > 500 ||
+      this.state.style.length > 500
+    ){
+      errors.push("• 500 character maximum per field.")
     }
 
-    if (this.state.mixdown.length < 50){
-      errors.push("• Mixdown feedback must be at least 50 characters long. ")
+    if (this.state.structure.length < 1 ||
+      this.state.mixdown.length < 1 ||
+      this.state.style.length < 1
+    ){
+      errors.push("• Fields cannot be blank.")
     }
 
-    if (this.state.style.length < 50){
-      errors.push("• Style feedback must be at least 50 characters long. ")
-    }
 
     if(this.props.currentUser.id == this.props.currentSong.user.id){
       errors.push("• You cannot review your own song. ")
@@ -68,6 +73,7 @@ class FeedbackForm extends React.Component {
       structure: '',
       mixdown: '',
       style: '',
+      recomendations: '',
       errors: []
     })
   }
@@ -78,6 +84,7 @@ class FeedbackForm extends React.Component {
       style: this.state.style,
       structure: this.state.structure,
       mixdown: this.state.mixdown,
+      recomendations: this.state.recomendations,
       song_id: this.props.currentSong.id,
       user_id: this.props.currentUser.id
     }
@@ -120,6 +127,14 @@ class FeedbackForm extends React.Component {
           nameText="Style"
           handler={this.handleChange}
           formText="Feeling the vibe?"
+        />
+
+        <FormItem
+          name="recomendations"
+          content={this.state.recomendations}
+          nameText="Recomended listening:"
+          handler={this.handleChange}
+          formText="Paste Spotify URI here (Optional)"
         />
 
         <input type="submit" className="button" value="Submit " onClick={handleSubmit} />

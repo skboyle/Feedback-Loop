@@ -8,23 +8,23 @@
 
 user_list = [
   {email: "Buddy1@gmail.com",
-    name: "Buddy1",
+    name: "MoogHead",
     website_url: "buddy.com"
   },
   {email: "Buddy2@gmail.com",
-    name: "Buddy2",
+    name: "AllRoland",
     website_url: "buddy2.com"
   },
   {email: "Buddy3@gmail.com",
-    name: "Buddy3",
+    name: "KorgLover",
     website_url: "buddy3.com"
   },
   {email: "Buddy4@gmail.com",
-    name: "Buddy4",
+    name: "BigKick",
     website_url: "buddy4.com"
   },
   {email: "Buddy5@gmail.com",
-    name: "Buddy5",
+    name: "HouseHead",
     website_url: "buddy5.com"
   }
 ]
@@ -37,45 +37,101 @@ user5 = User.create(user_list[4])
 
 
 song_list = [
-  {name: "Song1",
-  artist_name: "Cool Buddy",
+  {name: "Jet Plane",
+  artist_name: "Lake Bird",
   genre: "House",
-  description: "This discription will repeat over and over and over again.",
-  song_url: "https://soundcloud.com/stream",
-  image_url: "https://i.pinimg.com/736x/f0/e3/d1/f0e3d1a335e41830613879055f1fc0f9--typo-design-print-design.jpg",
-  user_id: 1
-  },
-  {name: "Song2",
-  artist_name: "DJ Seed",
-  genre: "Disco",
-  description: "This discription will repeat over and over and over again.",
-  song_url: "https://soundcloud.com/stream",
-  image_url: "https://i.pinimg.com/736x/ac/c5/42/acc5427b31c414f86dd9d3b40a78b282--vinyl-cover-cover-art.jpg",
-  user_id: 1
-  },
-  {name: "Song3",
-  artist_name: "Artist Formerly Known As Seed",
-  genre: "Electro",
-  description: "This discription will repeat over and over and over again.",
-  song_url: "https://soundcloud.com/stream",
-  image_url: "https://i.pinimg.com/736x/ba/0a/72/ba0a72e8c5c756251c37f1e88988df4e--vinyl-cover-cover-art.jpg",
+  description: "Dj tool with Alan Watts. Any tips for making this song more engaging?",
+  song_url: "https://soundcloud.com/user-36832311/jet-plane/s-FujmT",
+  image_url: 'https://i1.sndcdn.com/artworks-000252780773-rgy43a-t500x500.jpg',
   user_id: 2
   },
-  {name: "Song4",
-  artist_name: "MC SEED",
-  genre: "Techno",
-  description: "This discription will repeat over and over and over again.",
-  song_url: "https://soundcloud.com/stream",
-  image_url: "https://i.pinimg.com/736x/58/9c/ac/589cac58d0debcf2fca6ea266ad88102--josef-albers-music-covers.jpg",
-  user_id: 2
-  },
-  {name: "Song5",
-  artist_name: "Lil' Seed",
-  genre: "Soul",
-  description: "This discription will repeat over and over and over again.",
-  song_url: "https://soundcloud.com/stream",
-  image_url: "https://i.pinimg.com/736x/6c/2b/72/6c2b72b1f7bdcf35dbd014b0dd3bcacd--album-covers-cover-art.jpg",
+  {name: "Locket",
+  artist_name: "New Ruins",
+  genre: "Ambient",
+  description: "Synthezier drones",
+  song_url: "https://soundcloud.com/user-36832311/locket/s-ShnNs",
+  image_url: 'https://i1.sndcdn.com/artworks-000252786842-2u6qww-t500x500.jpg',
   user_id: 3
+  },
+  {name: "Rounds Perceived",
+  artist_name: "CJX",
+  genre: "House",
+  description: "Goofy house though 90s lense.",
+  song_url: "https://soundcloud.com/user-36832311/rounds-perceived/s-1qtfd",
+  image_url: 'https://i1.sndcdn.com/artworks-000252791258-zyahdx-t500x500.jpg',
+  user_id: 4
+  },
+  {name: "BR18",
+  artist_name: "DJHTMHD",
+  genre: "Techno",
+  description: "https://soundcloud.com/user-36832311/br18/s-A1xU4",
+  song_url: "Maximalist Techno. Looking for mix feedback.",
+  image_url: 'https://i1.sndcdn.com/artworks-000252779126-xpys6o-t500x500.jpg',
+  user_id: 5
+  },
+  {name: "Blood & Releif",
+  artist_name: "Cartist",
+  genre: "House",
+  description: "Slow Dreamy house music.",
+  song_url: "https://soundcloud.com/user-36832311/blood-releif/s-L0jhV",
+  image_url: 'https://i1.sndcdn.com/artworks-000252792749-b84ydo-t500x500.jpg',
+  user_id: 1
+  },
+  {name: "Kashif",
+  artist_name: "Unfunk",
+  genre: "House",
+  description: "Off kilter house. looking for structure feedback.",
+  song_url: "https://soundcloud.com/user-36832311/kashif/s-5rjtC",
+  image_url: 'https://i1.sndcdn.com/artworks-000252789527-8ldmy4-t500x500.jpg',
+  user_id: 1
+  },
+  {name: "Gift",
+  artist_name: "Bluest Light",
+  genre: "House",
+  description: "Warm analog house jam",
+  song_url: "https://soundcloud.com/user-36832311/bluest-light/s-YdQGF",
+  image_url: 'https://i1.sndcdn.com/artworks-000252785078-49c4sz-t500x500.jpg',
+  user_id: 2
+  },
+  {name: "GMAR",
+  artist_name: "HexCoder",
+  genre: "House",
+  description: "Left-field house",
+  song_url: "https://soundcloud.com/user-36832311/gift-me-a-rainbow/s-RJHXw",
+  image_url: 'https://i1.sndcdn.com/artworks-000252792482-w67cnh-t500x500.jpg',
+  user_id: 3
+  },
+  {name: "Cozy Drifter",
+  artist_name: "Cozy Drifter",
+  genre: "House",
+  description: "Experimental house. How's my structure?",
+  song_url: "https://soundcloud.com/user-36832311/cozy-drifter/s-MTEEe",
+  image_url: 'https://i1.sndcdn.com/artworks-000252789128-iy7f22-t500x500.jpg',
+  user_id: 4
+  },
+  {name: "Sequin Lover",
+  artist_name: "Sequin Lover",
+  genre: "House",
+  description: "Smooth Strutting",
+  song_url: "https://soundcloud.com/user-36832311/sequin-lover/s-nPeXs",
+  image_url: 'https://i1.sndcdn.com/artworks-000252790379-z5p20n-t500x500.jpg',
+  user_id: 5
+  },
+  {name: "In Color",
+  artist_name: "J/J",
+  genre: "Techno",
+  description: "Collaboration",
+  song_url: "https://soundcloud.com/user-36832311/in-color/s-zeIKj",
+  image_url: 'https://i1.sndcdn.com/artworks-000252783047-xp1baj-t500x500.jpg',
+  user_id: 1
+  },
+  {name: "Hello World",
+  artist_name: "Sleeptrax",
+  genre: "House",
+  description: "House/Ambient experiment",
+  song_url: "https://soundcloud.com/user-36832311/hello-world/s-bOhfx",
+  image_url: 'https://i1.sndcdn.com/artworks-000252790031-cni5ih-t500x500.jpg',
+  user_id: 2
   }
 ]
 
@@ -84,43 +140,52 @@ song2 = Song.create(song_list[1])
 song3 = Song.create(song_list[2])
 song4 = Song.create(song_list[3])
 song5 = Song.create(song_list[4])
+song6 = Song.create(song_list[5])
+song7 = Song.create(song_list[6])
+song8 = Song.create(song_list[7])
+song9 = Song.create(song_list[8])
+song10 = Song.create(song_list[9])
+song11 = Song.create(song_list[10])
+song12 = Song.create(song_list[11])
+
+
 
 
 feedback_list = [
-  { structure: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    mixdown: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    style: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    recomendations: "Listen to better music.",
+  { structure: "Perfect!",
+    mixdown: "What a good looking audience!",
+    style: "Hire me!",
+    recomendations: "spotify:track:1X0vTAe9yfqZMqNUnrgxCy",
     user_id: 1,
-    song_id: 2
+    song_id: 11
   },
-  { structure: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    mixdown: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    style: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    recomendations: "Listen to better music.",
+  { structure: "Great tune!, you clearly don't need any help.",
+    mixdown: "I don't know much about mixdowns but I love this website.",
+    style: "That's a nice shirt Steve",
+    recomendations: "spotify:track:2N7jDmtroOgogtklr93U6T",
     user_id: 2,
-    song_id: 1
+    song_id: 11
   },
-  { structure: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    mixdown: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    style: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    recomendations: "Listen to better music.",
+  { structure: "Perfect!",
+    mixdown: "What a good looking audience!",
+    style: "Hire me!",
+    recomendations: "spotify:track:1X0vTAe9yfqZMqNUnrgxCy",
     user_id: 3,
-    song_id: 1
+    song_id: 11
   },
-  { structure: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    mixdown: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    style: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    recomendations: "Listen to better music.",
-    user_id: 3,
-    song_id: 3
-  },
-  { structure: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    mixdown: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    style: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    recomendations: "Listen to better music.",
+  { structure: "Great tune!, you clearly don't need any help.",
+    mixdown: "I don't know much about mixdowns but I love this website.",
+    style: "That's a nice shirt Steve",
+    recomendations: "spotify:track:2N7jDmtroOgogtklr93U6T",
     user_id: 4,
-    song_id: 2
+    song_id: 11
+  },
+  { structure: "Great tune!, you clearly don't need any help.",
+    mixdown: "I don't know much about mixdowns but I love this website.",
+    style: "That's a nice shirt Steve",
+    recomendations: "spotify:track:2N7jDmtroOgogtklr93U6T",
+    user_id: 4,
+    song_id: 10
   }
 ]
 
@@ -154,29 +219,29 @@ favorite8 = Favorite.create(user_id: 3, song_id: 3, heart: 1)
 favorite9 = Favorite.create(user_id: 4, song_id: 1, heart: 1)
 favorite10 = Favorite.create(user_id: 4, song_id: 3, heart: 1)
 
-album_list = [
-  { user_id: 1,
-    name: "albumtitle",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    genre: "House",
-  },
-  { user_id: 2,
-    name: "albumtitle2",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    genre: "Disco",
-  },
-  { user_id: 3,
-    name: "albumtitle3",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    genre: "Techno",
-  }
-]
-
-album1 = Album.create(album_list[0])
-album2 = Album.create(album_list[1])
-album3 = Album.create(album_list[2])
-
-collection1 = Collection.create(song_id: 1, album_id: 1)
-collection2 = Collection.create(song_id: 2, album_id: 1)
-collection3 = Collection.create(song_id: 3, album_id: 2)
-collection4 = Collection.create(song_id: 4, album_id: 2)
+# album_list = [
+#   { user_id: 1,
+#     name: "albumtitle",
+#     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+#     genre: "House",
+#   },
+#   { user_id: 2,
+#     name: "albumtitle2",
+#     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+#     genre: "Disco",
+#   },
+#   { user_id: 3,
+#     name: "albumtitle3",
+#     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+#     genre: "Techno",
+#   }
+# ]
+#
+# album1 = Album.create(album_list[0])
+# album2 = Album.create(album_list[1])
+# album3 = Album.create(album_list[2])
+#
+# collection1 = Collection.create(song_id: 1, album_id: 1)
+# collection2 = Collection.create(song_id: 2, album_id: 1)
+# collection3 = Collection.create(song_id: 3, album_id: 2)
+# collection4 = Collection.create(song_id: 4, album_id: 2)

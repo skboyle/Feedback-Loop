@@ -1,20 +1,24 @@
 .rails-nav{
-  align-self: right;
-  float: right;
-  padding-top: 0px;
-  margin-top: 0px;
+  padding-top: 5px;
+  margin-top: 5px;
   margin-right: 5px;
   padding-right: 5px;
-  white-space: nowrap;
-  display: inline-block;
+  // white-space: nowrap;
+  // display: inline-block;
   background-color: none;
   height: 20px;
   right: 0;
   top: 0;
   position: fixed;
   background: rgba(54, 25, 25, .0);
+  color: lightgrey;
 }
-
+.rails-nav a {
+  color: lightgrey
+}
+.rails-nav a:hover{
+ color: #1ED760;
+}
 .nav-bar{
   width: 250px;
   margin-left: 10px;
@@ -27,22 +31,23 @@
   float: right;
 }
 
-.link-feed a {
-  margin: 0px;
-  color: black;
-
+.home-link {
+  height: 80px;
 }
 
-.link-my-tracks a {
+.home-link h1 {
   margin: 0px;
-  color: black;
-
 }
 
-.link-favorites {
+
+.my-links a {
   margin: 0px;
   color: black;
+}
 
+.my-links a:hover {
+  margin: 0px;
+  color: #1ED760;
 }
 
 .my-links{
@@ -54,6 +59,12 @@
 
 @media screen and (min-width: 1300px) {
     .nav-bar {
+        position: sticky;
+    }
+}
+@media screen and (min-width: 1040px) {
+    .nav-bar {
+      background: fixed;
         position: sticky;
     }
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import FeedbackForm from './FeedbackForm'
 import SongShowInfo from './SongShowInfo'
-import FeedbackContainer from './FeedbackContainer'
 import FeedbackTile from './FeedbackTile'
 import NavBar from './NavBar'
 import Access from './Access'
@@ -128,6 +127,7 @@ class SongShowPage extends React.Component{
             currentUser={this.state.currentUser}
             voteHandler={this.handleVote}
             voteTotal={feedback.vote_total}
+            scode={feedback.recomendations}
           />
         )
       })
@@ -138,7 +138,8 @@ class SongShowPage extends React.Component{
           <NavBar/>
           <div className="song-home-margin">
           <div className="row">
-            <div className="small-8 medium-6 large-3 columns">
+            <div className="small-10 small-offset-1 medium-4 medium-offset-0 large-3 large-offset-0 columns ">
+              <div className="infoscroll">
 
                 <SongShowInfo
                   key={this.state.song.id}
@@ -161,11 +162,10 @@ class SongShowPage extends React.Component{
                   currentSong={this.state.song}
                   currentUser={this.state.currentUser}
                 />
-
+              </div>
             </div>
-            <div className="small-8 medium-8 large-8 columns">
+            <div className="columns">
               <div className="feedback-scroll">
-
                 {feedbacks}
               </div>
             </div>
@@ -181,7 +181,6 @@ class SongShowPage extends React.Component{
           <div className="song-home-margin">
           <div className="row">
             <div className="small-8 medium-6 large-3 columns">
-
                 <SongShowInfo
                   key={this.state.song.id}
                   id={this.state.song.id}
@@ -199,9 +198,8 @@ class SongShowPage extends React.Component{
 
                 />
                 <Access
-                  text="Log in to give feedback"
+                  text="Log in to give feedback. "
                 />
-
             </div>
             <div className="small-8 medium-8 large-8 columns">
               <div className="feedback-scroll">

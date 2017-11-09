@@ -17,7 +17,7 @@ const HomeSongContainer = props => {
 
   return(
     <div className="home-song-container">
-      <div className="row small-up-1 medium-up-3 large-up-3">
+      <div className="row small-up-2 medium-up-2 large-up-3">
         {songs}
       </div>
     </div>

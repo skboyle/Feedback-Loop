@@ -21,6 +21,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Rozha+One');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 /*// @import "foundation_and_overrides";*/
 // @include foundation-grid;
@@ -41,12 +42,19 @@ h4 {
 }
 
 hr {
-  width: 95%;
-  color: black;
+  width: 100%;
+  color: lightgrey;
+  border-style: solid;
+  border-top-width: 1px;
+  border-color: lightgrey;
+  margin-left: 0px;
+  margin-right: 0px;
+
 }
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: white;
+  font-family: 'Merriweather', serif;
+  // background-image: url();
+  background-color: #fafdfd;
   margin: 0px;
 }
 
@@ -55,14 +63,22 @@ a {
   text-decoration: none;
   margin-left: 2px;
   margin-right: 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  // margin-top: 0px;
+  // margin-bottom: 0px;
+  // padding-top: 0px;
+  // padding-bottom: 0px;
+  // height: 0px;
 }
 
 a:hover{
-  color: grey;
+  color: #1ED760;
 }
 
 p {
   margin: 10px;
+
 }
 
 ul {
@@ -74,25 +90,104 @@ select{
   width:200px;
   -moz-appearance: none;
   appearance: none;
+  radius: 0px;
   border-radius: 0px;
-  background-color: white;
+  background-color: #fafdfd;
+  -webkit-appearance: none;
+}
+
+option{
+  border-radius: 0px;
+  radius: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fafdfd;
+}
+option-placeholder{
+  border-radius: 0px;
+  radius: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #fafdfd;
+}
+
+.option-style{
+  border-radius: 0px;
+  radius: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fafdfd;
+  font-family: 'Merriweather', serif !important;
+}
+
+select:focus{
+  outline-width: thin;
+  outline-color: black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fafdfd;
+}
+
+input{
+  background-color: #fafdfd;
+  radius: 0px;
 }
 
 input[type=text] {
-  width: 200px;
+  width: 194px;
+}
+
+input[type=text]:focus {
+  outline-width: thin;
+  outline-color: black;
+}
+
+::-webkit-input-placeholder {
+  color: lightgrey;
 }
 
 textarea {
-  width: 200px;
+  height: 60px;
+  width: 194px;
   resize: none;
+  background-color: #fafdfd;
+  // border: none;
 }
 
-// @media only screen and (max-width: 800px) {
-//   .input-group-rounded {
-//     margin: 0% 10%;
-//   }
-// }
+textarea:focus{
+  outline-width: thin;
+  outline-color: black;
+}
 
 .red {
   background-color: red;
+}
+
+.button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+input.button {
+  padding-left: none;
+}
+
+.button:focus {outline:0;}
+
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    color: #1ED760;
+}
+
+button, input, textarea, select, isindex, datagrid {
+    font: inherit;
+    font-family: 'Merriweather', serif;
 }

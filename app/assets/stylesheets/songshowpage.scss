@@ -1,9 +1,8 @@
 .song-home-margin{
-  height: 100%;
-  width: 80%;
+  height: 90%;
+  width: 70%;
   align-items: center;
   display: inline-block;
-  overflow-y: scroll;
   align-self: right;
   margin-left: auto;
   margin-right: auto;
@@ -16,9 +15,28 @@
     }
 }
 
+@media screen and (max-width: 1300px) {
+    .song-home-margin {
+      width: 75%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .song-home-margin {
+        width: 100%;
+        position:inherit;
+        align-content: center;
+    }
+}
+
+
 
 .song-show-info {
   width: 200px;
+  color: black;
+  // display: inline-block;
+  // box-shadow: 5px 5px 5px #888888;
+
 }
 
 .song-show-info p {
@@ -26,20 +44,65 @@
 }
 
 .song-show-info a {
+  font-size: 18px;
   margin: 2px;
-  color: blue;
+  color: #1ED760;
   text-decoration: underline;
   font-style: bold;
 }
 
+.song-show-info a:hover {
+ opacity: 0.5;
+}
 .user-quote {
-  text-align: right;
+  float: right;
   margin: 0px;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
-.feedback-form{
+.feedback-tile p {
+  font-size: 14px;
+}
+
+.feedback-tile {
+    border-color: lightgrey;
+    border-width: thin;
+    // border-top-style: solid;
+    // border
+    width: 85%;
+    margin-bottom: 20px;
+}
+.feedback-form {
+    // box-shadow: 5px 5px 5px #888888;
+    width: 200px;
+    display: inline-block;
+    margin-top: 10px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: lightgrey;
+    overflow-y: scroll;
+    height: 100%;
+}
+.feedback-form h3 {
+  margin-left: 0px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.feedback-form input.button {
+  margin-top: 3px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.feedback-text {
+    padding-top: 10px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.feedback-text b {
 
 }
 
@@ -49,8 +112,28 @@
     margin-top: 0px;
 }
 
+.feedback-info-button {
+    display: inline-block;
+    text-align: left;
+    margin-top: 0px;
+    font-size: 18px !important;
+}
+.infoscroll{
+
+}
+.infoscroll  {
+  font-size: 14px;
+}
+
 .feedback-scroll{
+  position: fixed;
   display: inline-block;
   overflow-y: scroll;
   height: 95%;
+}
+
+@media screen and (max-width: 640px) {
+    .feedback-scroll {
+        position: sticky;
+    }
 }

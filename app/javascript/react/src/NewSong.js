@@ -38,28 +38,32 @@ class NewSong extends React.Component{
     let errors = []
 
     if (this.state.name === ""){
-      errors.push("• Name field can't be blank. ")
+      errors.push("• Name cannot be blank. ")
     }
 
     if (this.state.genre === ""){
-      errors.push("• Please select a genre ")
+      errors.push("• Please select a genre. ")
     }
 
-    if (this.state.description.length < 50 ){
-      errors.push("• Description must be at least 50 characters long. ")
+    if (this.state.description.length < 1 ){
+      errors.push("• Description required. ")
+    }
+
+    if (this.state.description.length > 250 ){
+      errors.push("• Description must be under 250 characters. ")
     }
 
     if (this.state.song_url === ""){
-      errors.push("• Link to song must be present. ")
+      errors.push("• Song URL required. ")
     }
 
-    if (this.props.feedbacks.length / this.props.songs.length <= 3){
-      errors.push("• Your feedback ratio is too low. Give more feedback! ")
-    }
-
-    if (this.props.rating < 3){
-      errors.push("• Your feedback rating is too low. Give more feedback! ")
-    }
+    // if (this.props.feedbacks.length / this.props.songs.length <= 3){
+    //   errors.push("• Your feedback ratio is too low. Give more feedback! ")
+    // }
+    //
+    // if (this.props.rating < 3){
+    //   errors.push("• Your feedback rating is too low. Give more feedback! ")
+    // }
 
 
     this.setState({errors: errors})
@@ -105,7 +109,7 @@ class NewSong extends React.Component{
       description: this.state.description,
       song_url: this.state.song_url,
       image_url: this.state.image_url,
-      user_id: this.props.currentUser
+      user_id: this.props.currentUser.id
     }
     if (SongPayload.image_url == "") {
       SongPayload.image_url = "http://freevector.co/wp-content/uploads/2014/06/54450-music-black-circular-button.png"
