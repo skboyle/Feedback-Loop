@@ -23,7 +23,7 @@ class FavoritesIndex extends React.Component{
     .then(body => {
       this.setState({ currentUser: body })
     })
-    fetch('http://localhost:3000/api/v1/favorites', {
+    fetch('/api/v1/favorites', {
       credentials: 'same-origin',
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }

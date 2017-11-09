@@ -12,11 +12,11 @@
   <body>
     <%= yield %>
     <div class="rails-nav">
-    <div class="flasherror">
+    <!-- <div class="flasherror">
       <%= flash[:notice] %>
       <%= flash[:alert] %>
       <%= flash[:ommiauth_spotify_force_approval?] %>
-    </div>
+    </div> -->
     <div classname="signinlinks">
     <% if current_user %>
       <b><%= current_user.name %></b> |

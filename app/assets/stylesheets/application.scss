@@ -128,6 +128,7 @@ select:focus{
   background-color: #fafdfd;
 }
 
+
 input{
   background-color: #fafdfd;
   radius: 0px;
@@ -151,12 +152,12 @@ textarea {
   width: 194px;
   resize: none;
   background-color: #fafdfd;
-  // border: none;
+  border-color: black;
 }
 
 textarea:focus{
   outline-width: thin;
-  outline-color: black;
+  outline-color: #1ED760;
 }
 
 .red {
