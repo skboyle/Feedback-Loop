@@ -10,8 +10,8 @@ Rails.application.routes.draw do
       resources :users, only: [:index, :show, :destroy]
       resources :feedbacks, only: [:create]
       resources :favorites, only: [:index, :create]
-      resources :songs, only: [:index, :show, :create, :edit, :destroy] do
-        resources :feedbacks, only: [:create]
+      resources :songs, only: [:index, :show, :create, :edit] do
+        resources :feedbacks, only: [:create, :edit]
       end
       resources :upvotes, only: [:create]
 

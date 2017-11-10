@@ -134,29 +134,28 @@ class NewSong extends React.Component{
         <FormItem
           name="name"
           content={this.state.name}
-          nameText="Song Name:"
+          nameText="Song Name"
           handler={this.handleChange}
         />
 
         <FormItem
           name="artist_name"
           content={this.state.artist_name}
-          nameText="Artist Name:"
+          nameText="Artist Name"
           handler={this.handleChange}
-          formText="Use full URL"
         />
 
         <DropDown
           name="genre"
           content={this.state.genre}
-          nameText="Genre:"
+          nameText="Genre"
           handler={this.handleChange}
         />
 
         <FormItem
           name="song_url"
           content={this.state.song_url}
-          nameText="Song URL:"
+          nameText="Song URL"
           handler={this.handleChange}
           formText="Use full URL"
         />
@@ -164,7 +163,7 @@ class NewSong extends React.Component{
         <FormItem
           name="image_url"
           content={this.state.image_url}
-          nameText="Image URL:"
+          nameText="Image URL"
           handler={this.handleChange}
           formText="Use full URL (Optional)"
         />
@@ -172,7 +171,7 @@ class NewSong extends React.Component{
         <TextAreaFormItem
           name="description"
           content={this.state.description}
-          nameText="Description:"
+          nameText="Description"
           handler={this.handleChange}
           formText="Tell us about your song. What would you like help on?"
         />

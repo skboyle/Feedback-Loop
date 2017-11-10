@@ -18,9 +18,7 @@
 @import 'foundation';
 @include foundation-flex-classes;
 @include foundation-flex-grid;
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Rozha+One');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 /*// @import "foundation_and_overrides";*/
@@ -54,7 +52,7 @@ hr {
 body {
   font-family: 'Merriweather', serif;
   // background-image: url();
-  background-color: #fafdfd;
+  background-color: #FAFAFA;
   margin: 0px;
 }
 
@@ -92,7 +90,7 @@ select{
   appearance: none;
   radius: 0px;
   border-radius: 0px;
-  background-color: #fafdfd;
+  background-color: #FAFAFA;
   -webkit-appearance: none;
 }
 
@@ -101,14 +99,14 @@ option{
   radius: 0px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-color: #fafdfd;
+  background-color: #FAFAFA;
 }
 option-placeholder{
   border-radius: 0px;
   radius: 0px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  color: #fafdfd;
+  color: #FAFAFA;
 }
 
 .option-style{
@@ -116,7 +114,7 @@ option-placeholder{
   radius: 0px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-color: #fafdfd;
+  background-color: #FAFAFA;
   font-family: 'Merriweather', serif !important;
 }
 
@@ -125,13 +123,14 @@ select:focus{
   outline-color: black;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-color: #fafdfd;
+  background-color: #FAFAFA;
 }
 
 
 input{
-  background-color: #fafdfd;
+  background-color: #FAFAFA;
   radius: 0px;
+  width: 194px;
 }
 
 input[type=text] {
@@ -141,6 +140,7 @@ input[type=text] {
 input[type=text]:focus {
   outline-width: thin;
   outline-color: black;
+  width: 194px;
 }
 
 ::-webkit-input-placeholder {
@@ -151,13 +151,13 @@ textarea {
   height: 60px;
   width: 194px;
   resize: none;
-  background-color: #fafdfd;
+  background-color: #FAFAFA;
   border-color: black;
 }
 
 textarea:focus{
   outline-width: thin;
-  outline-color: #1ED760;
+  outline-color: black;
 }
 
 .red {

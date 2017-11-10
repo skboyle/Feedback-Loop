@@ -1,7 +1,7 @@
 .rails-nav{
   padding-top: 5px;
-  margin-top: 5px;
-  margin-right: 5px;
+  margin-top: 10px;
+  margin-right: 4px;
   padding-right: 5px;
   // white-space: nowrap;
   // display: inline-block;
@@ -21,6 +21,7 @@
 }
 .nav-bar{
   width: 250px;
+  margin-top: -18px;
   margin-left: 10px;
   float: left;
   margin-bottom: none;
@@ -51,6 +52,7 @@
 }
 
 .my-links{
+  margin-top: -5px;
   border-left-color: black;
   border-left-style: solid;
   border-left-width: thin;

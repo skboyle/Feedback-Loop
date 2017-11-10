@@ -3,8 +3,6 @@ import { Link } from 'react-router';
 
 const NavBar = props => {
 
-
-
   return(
     <div className="nav-bar">
     <div className="home-link">
@@ -39,8 +37,8 @@ const NavBar = props => {
     </div>
   </div>
     {props.children}
-</div>
-)
+  </div>
+  )
 }
 
 export default NavBar;
