@@ -6,7 +6,6 @@ const ErrorBox = ({ errors }) => {
   })
   return (
     <div className='panel-alert'>
-      <h4>Errors</h4>
       <ul>
         {errorElements}
       </ul>

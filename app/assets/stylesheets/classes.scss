@@ -19,8 +19,9 @@
   text-align: center;
 }
 
-
 iframe {
   width: 97%;
-  padding: 10px
+  min-width: 300px;
+  padding: 10px;
+  border: 0px;
 }

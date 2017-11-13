@@ -18,9 +18,7 @@ class SongShowPage extends React.Component{
     this.addNewFeedback = this.addNewFeedback.bind(this)
     this.handleVote = this.handleVote.bind(this)
     this.favoriteHandler = this.favoriteHandler.bind(this)
-
   }
-
 
   componentDidMount() {
     fetch('/api/v1/user/is_signed_in.json', {
@@ -32,7 +30,6 @@ class SongShowPage extends React.Component{
     .then(body => {
       this.setState({ currentUser: body.user })
     })
-
     let id = this.props.params.id
     fetch(`/api/v1/songs/${id}`,{
       credentials: 'same-origin',
@@ -89,7 +86,6 @@ class SongShowPage extends React.Component{
     })
   }
 
-
   addNewFeedback(payLoad) {
     let id = this.props.params.id
     fetch(`/api/v1/songs/${id}/feedbacks`, {
@@ -104,7 +100,6 @@ class SongShowPage extends React.Component{
     })
     .then(responseData =>{
       this.setState({ feedbacks: this.state.feedbacks.concat(responseData) })
-
     })
   }
 
@@ -112,10 +107,8 @@ class SongShowPage extends React.Component{
       let favoriteHandler = (event) => this.favoriteHandler(event)
       let handleVote = (event) => this.voteHandler(event)
       let addNewFeedback = (payLoad) => this.addNewFeedback(payLoad)
-
       let feedbacks = this.state.feedbacks.map(feedback => {
         return(
-
           <FeedbackTile
             key={feedback.id}
             id={feedback.id}

@@ -2,7 +2,6 @@ import React from 'react';
 import InfoContainer from './InfoContainer'
 import NavBar from './NavBar'
 
-
 class InfoPage extends React.Component{
   constructor(props) {
     super(props);
@@ -23,10 +22,7 @@ class InfoPage extends React.Component{
     })
   }
 
-
-
   render() {
-
     return(
       <div>
         <NavBar/>

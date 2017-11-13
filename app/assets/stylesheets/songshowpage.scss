@@ -30,21 +30,23 @@
 }
 
 .song-tile-image {
-  box-shadow: 2px 2px 5px grey;
-
+  width: 200px;
+  border-color: #A0A0A0;
 }
 
 
 .song-show-info {
   width: 200px;
   color: black;
-  // display: inline-block;
-  // box-shadow: 5px 5px 5px #888888;
-
+  box-shadow: 2px 2px 5px grey;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #A0A0A0;
+  background: white;
 }
 
 .song-show-info p {
-  margin: 2px
+  margin: 2px;
 }
 
 .song-show-info a {
@@ -72,21 +74,21 @@
 .feedback-tile {
     border-color: lightgrey;
     border-width: thin;
-    // border-top-style: solid;
     width: 85%;
     margin-bottom: 20px;
 }
 .feedback-form {
-    // box-shadow: 5px 5px 5px #888888;
-    width: 200px;
-    display: inline-block;
-    margin-top: 10px;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-color: lightgrey;
-    overflow-y: scroll;
-    height: 100%;
+  padding: 2px;
+  background-color: white;
+  width: 198px;
+  display: inline-block;
+  margin-top: 10px;
+  border-top-style: #A0A0A0;
+  border-top-width: 1px;
+  overflow-y: scroll;
+  height: 100%;
 }
+
 .feedback-form h3 {
   margin-left: 0px;
   margin-top: 5px;
@@ -100,11 +102,15 @@
 }
 
 .feedback-text {
-    padding-top: 10px;
-    background-color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-shadow: 2px 2px 5px grey;
+  min-width: 350px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #A0A0A0;
+  padding-top: 10px;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 2px 2px 5px grey;
 }
 
 .feedback-text b {
@@ -123,9 +129,7 @@
     margin-top: 0px;
     font-size: 18px !important;
 }
-.infoscroll{
 
-}
 .infoscroll  {
   font-size: 14px;
 }

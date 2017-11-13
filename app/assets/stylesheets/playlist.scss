@@ -1,0 +1,18 @@
+.playlist-container {
+  max-width: 1000px;
+  min-width: 300px;
+  float: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.playlist-tile iframe {
+  width: 300px;
+}

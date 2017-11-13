@@ -8,6 +8,7 @@ import Grid from 'react-css-grid'
 import NavBar from './NavBar'
 import FavoritesIndex from './FavoritesIndex'
 import InfoPage from './InfoPage'
+import Playlist from './Playlist'
 
 
 const App = props => {
@@ -19,6 +20,7 @@ const App = props => {
       <Route path="/songs" component={HomeIndex} />
       <Route path="/info" component={InfoPage} />
       <Route exact path="/songs/:id" component={SongShowPage}/>
+      <Route exact path="/playlist" component={Playlist}/>
     </Router>
   )
 }

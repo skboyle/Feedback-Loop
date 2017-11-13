@@ -16,7 +16,6 @@ const SongShowInfo = props => {
     }
   })
 
-
   return(
 
     <div className="song-show-info">
@@ -34,10 +33,8 @@ const SongShowInfo = props => {
             onClick={props.handler}>
             ♥ {props.heart_total}
           </button>
-
       <p><b>Description:</b> {props.description}</p>
     </div>
-
   )
 }
 

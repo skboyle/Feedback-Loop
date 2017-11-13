@@ -1,5 +1,11 @@
 class Api::V1::FeedbacksController < ApplicationController
   skip_before_action :verify_authenticity_token
+  # protect_from_forgery unless: -> { request.format.json? }
+
+  def index
+    feedback = Feedback.all
+    render json: feedback
+  end
 
   def create
     feedback = JSON.parse(request.body.read)

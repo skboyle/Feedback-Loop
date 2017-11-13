@@ -15,6 +15,9 @@ const InfoContainer = props => {
       Feedback Loop encourages positive interaction and helpful critiques, so remember to be thoughtful. Your feedback is rated and after making three positive critiques's you can post a song of your own.
       <br/>
       <br/>
+      Check out the playlist for a collection of all user recomended songs.
+      <br/>
+      <br/>
       Have fun and be nice!
     </p>
     </div>

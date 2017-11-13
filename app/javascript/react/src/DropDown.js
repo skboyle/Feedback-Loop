@@ -1,7 +1,5 @@
 import React from 'react';
 
-//need to figure out why this is defaulting to Alabama and not setting to genre
-
 const DropDown = props => {
   let genres = [["","Select a Genre"],
   ["Ambient & Experimental","Ambient & Experimental"],
@@ -11,7 +9,7 @@ const DropDown = props => {
   ["Drum & Bass","Drum & Bass"],
   ["EDM & DubStep","EDM & DubStep"],
   ["Electronic","Electronic"],
-  ["House & Tehcno","House & Tehcno"],
+  ["House & Techno","House & Techno"],
   ["Hip Hop","Hip Hop"],
   ["Indie","Indie"],
   ["Jazz","Jazz"],
@@ -30,14 +28,12 @@ const DropDown = props => {
   })
 
   return(
-
     <div>
       <label name={props.name}>{props.nameText}</label><br/>
       <select onChange={props.handler} name={props.name} value={props.content}>
         {genreOptions}
       </select>
     </div>
-
   )
 
 }

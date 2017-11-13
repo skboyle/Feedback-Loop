@@ -57,14 +57,13 @@ class NewSong extends React.Component{
       errors.push("• Song URL required. ")
     }
 
-    // if (this.props.feedbacks.length / this.props.songs.length <= 3){
-    //   errors.push("• Your feedback ratio is too low. Give more feedback! ")
-    // }
-    //
-    // if (this.props.rating < 3){
-    //   errors.push("• Your feedback rating is too low. Give more feedback! ")
-    // }
+    if (this.props.feedbacks.length / this.props.songs.length <= 3){
+      errors.push("• feedback ratio is too low.")
+    }
 
+    if (this.props.rating < 3){
+      errors.push("• feedback rating is too low.")
+    }
 
     this.setState({errors: errors})
 
@@ -94,11 +93,9 @@ class NewSong extends React.Component{
       console.log('bad form');
       return false;
     }
-
     this.submitSongForm(event)
     this.handleClearForm(event)
   }
-
 
   submitSongForm(event){
     event.preventDefault();

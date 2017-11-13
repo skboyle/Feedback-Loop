@@ -34,8 +34,6 @@ class FavoritesIndex extends React.Component{
     })
   }
 
-
-
   render() {
     if (this.state.currentUser.favorites) {
       return(
@@ -47,18 +45,14 @@ class FavoritesIndex extends React.Component{
           />
         </div>
       )
-
-    }else{
-
+    }else{  
       return(
         <div>
           <NavBar/>
           <div className="user-home-page">
-
             <Access
               text="Please log in to view favorites."
             />
-
           </div>
         </div>
       )

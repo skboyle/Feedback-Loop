@@ -56,70 +56,66 @@ class UserHomePage extends React.Component{
     })
   }
 
-
   render() {
     let currentUser = this.state.currentUser
     let addNewSong = (payLoad) => this.addNewSong(payLoad)
     if (this.state.currentUser) {
-    let songs = this.state.songs.map(song => {
+      let songs = this.state.songs.map(song => {
+        return(
+          <SongShowInfo
+            key={song.id}
+            id={song.id}
+            name={song.name}
+            artist_name={song.artist_name}
+            genre={song.genre}
+            description={song.description}
+            image_url={song.image_url}
+            song_url={song.song_url}
+            heart_total={song.heart_total}
+            username={song.username}
+            handler={this.favoriteHandler}
+          />
+        )
+      })
+
       return(
-        <SongShowInfo
-          key={song.id}
-          id={song.id}
-          name={song.name}
-          artist_name={song.artist_name}
-          genre={song.genre}
-          description={song.description}
-          image_url={song.image_url}
-          song_url={song.song_url}
-          heart_total={song.heart_total}
-          username={song.username}
-          handler={this.favoriteHandler}
-        />
-      )
-    })
+        <div>
+          <NavBar/>
+          <div className="user-home-page">
+            <div className="row">
+              <div className="small-10 small-offset-1 medium-3 medium-offset-0 large-3 large-offset-0 columns ">
+                <NewSong
+                  addNewSong={this.addNewSong}
+                  currentUser={this.state.currentUser}
+                  feedbacks={this.state.feedbacks}
+                  songs={this.state.songs}
+                  rating={this.state.rating}
 
-    return(
-      <div>
-        <NavBar/>
-        <div className="user-home-page">
-
-          <div className="row">
-            <div className="small-10 small-offset-1 medium-3 medium-offset-0 large-3 large-offset-0 columns ">
-              <NewSong
-                addNewSong={this.addNewSong}
-                currentUser={this.state.currentUser}
-                feedbacks={this.state.feedbacks}
-                songs={this.state.songs}
-                rating={this.state.rating}
-
-              />
-            </div>
-            <div className="user-song-container">
-            <div className="columns">
-              <HomeSongContainer
-                songs={this.state.songs}
-              />
-            </div>
+                />
+              </div>
+              <div className="user-song-container">
+                <div className="columns">
+                  <HomeSongContainer
+                    songs={this.state.songs}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    )
+      )
     }else{
       return(
-      <div>
-        <NavBar/>
-        <div className="user-home-page">
-
-          <Access
-            text="Please log in access your homepage."
-          />
-
+        <div>
+          <NavBar/>
+          <div className="user-home-page">
+            <Access
+              text="Please log in access your homepage."
+            />
+          </div>
         </div>
-      </div>
-    )
-  }
+      )
+    }
   }
 }
 export default UserHomePage;

@@ -110,7 +110,7 @@ class FeedbackForm extends React.Component {
           content={this.state.structure}
           nameText="Structure"
           handler={this.handleChange}
-          formText="Like my flow? Give advice on arrangement and the energy of the track."
+          formText="Arrangement and energy."
         />
 
         <TextAreaFormItem
@@ -118,7 +118,7 @@ class FeedbackForm extends React.Component {
           content={this.state.mixdown}
           nameText="Mixdown"
           handler={this.handleChange}
-          formText="How are my levels? Comment on the sound quality."
+          formText="Sound quality and levels."
         />
 
         <TextAreaFormItem
@@ -126,7 +126,7 @@ class FeedbackForm extends React.Component {
           content={this.state.style}
           nameText="Style"
           handler={this.handleChange}
-          formText="Feeling the vibe? Give feedback on feel and technique"
+          formText="Feel and technique."
         />
 
         <FormItem
@@ -134,7 +134,7 @@ class FeedbackForm extends React.Component {
           content={this.state.recomendations}
           nameText="Recomended Listening"
           handler={this.handleChange}
-          formText="Paste Spotify URI (Optional)"
+          formText="Spotify URI (Optional)"
         />
 
         <input type="submit" className="button" value="Submit " onClick={handleSubmit} />

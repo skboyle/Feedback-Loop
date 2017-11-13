@@ -20,7 +20,7 @@ class UserSerializer < ActiveModel::Serializer
   def rating
     ratingTotal = 0
     object.feedbacks.each do |feedback|
-      ratingTotal += favorite.vote_total
+      ratingTotal += feedback.vote_total
     end
 
   return ratingTotal
