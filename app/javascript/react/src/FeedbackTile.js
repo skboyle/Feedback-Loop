@@ -46,8 +46,6 @@ const FeedbackTile = props => {
           <p><b>Structure: </b>{props.structure}</p>
           <p><b>Mixdown: </b>{props.mixdown} </p>
           <p><b>Style: </b>{props.style} </p>
-          <p><b>Recomended Listening: </b></p>
-
           <p className="user-quote"> - {props.user}</p>
           <p className="feedback-info">
             <button

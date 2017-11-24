@@ -6,6 +6,7 @@ import NavBar from './NavBar'
 import SongContainer from './SongContainer'
 import HomeSongContainer from './HomeSongContainer'
 import Access from './Access'
+import BurgerMenu from './BurgerMenu'
 
 
 class UserHomePage extends React.Component{
@@ -80,10 +81,10 @@ class UserHomePage extends React.Component{
 
       return(
         <div>
-          <NavBar/>
+          <BurgerMenu/>
           <div className="user-home-page">
-            <div className="row">
-              <div className="small-10 small-offset-1 medium-3 medium-offset-0 large-3 large-offset-0 columns ">
+            <div className="row small-up-2 medium-up-3 large-up-4">
+              <div className="column">
                 <NewSong
                   addNewSong={this.addNewSong}
                   currentUser={this.state.currentUser}
@@ -93,8 +94,8 @@ class UserHomePage extends React.Component{
 
                 />
               </div>
+              <div className="columns">
               <div className="user-song-container">
-                <div className="columns">
                   <HomeSongContainer
                     songs={this.state.songs}
                   />
@@ -107,7 +108,7 @@ class UserHomePage extends React.Component{
     }else{
       return(
         <div>
-          <NavBar/>
+          <BurgerMenu/>
           <div className="user-home-page">
             <Access
               text="Please log in access your homepage."

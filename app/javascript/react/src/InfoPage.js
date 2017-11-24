@@ -1,6 +1,7 @@
 import React from 'react';
 import InfoContainer from './InfoContainer'
 import NavBar from './NavBar'
+import BurgerMenu from './BurgerMenu'
 
 class InfoPage extends React.Component{
   constructor(props) {
@@ -25,7 +26,7 @@ class InfoPage extends React.Component{
   render() {
     return(
       <div>
-        <NavBar/>
+        <BurgerMenu/>
         <div className="info-page">
           <div className="row" >
             <div className="small-10  medium-12 large-9 large-offset-2 columns">

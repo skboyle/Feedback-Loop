@@ -1,6 +1,7 @@
 import React from 'react';
 import SongContainer from './SongContainer'
 import NavBar from './NavBar'
+import BurgerMenu from './BurgerMenu'
 
 
 class HomeIndex extends React.Component{
@@ -23,10 +24,10 @@ class HomeIndex extends React.Component{
     })
   }
 
-  render() {  
+  render() {
     return(
       <div className="home-index">
-        <NavBar/>
+        <BurgerMenu/>
 
         <SongContainer
           songs={this.state.songs}

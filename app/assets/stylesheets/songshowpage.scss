@@ -1,32 +1,9 @@
 .song-home-margin{
-  height: 90%;
-  width: 70%;
-  align-items: center;
-  display: inline-block;
-  align-self: right;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-}
-
-@media screen and (min-width: 1300px) {
-    .song-home-margin {
-        position: fixed;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .song-home-margin {
-      width: 75%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .song-home-margin {
-        width: 100%;
-        position:inherit;
-        align-content: center;
-    }
+  height: 100%;
+  padding-top: 4em;
+  align-content: center;
+  justify-content: center;
+  overflow-y: scroll;
 }
 
 .song-tile-image {
@@ -72,10 +49,10 @@
 }
 
 .feedback-tile {
-    border-color: lightgrey;
-    border-width: thin;
-    width: 85%;
-    margin-bottom: 20px;
+  width: 450px;
+  border-color: lightgrey;
+  border-width: thin;
+  margin-bottom: 20px;
 }
 .feedback-form {
   padding: 2px;
@@ -86,7 +63,6 @@
   border-top-style: #A0A0A0;
   border-top-width: 1px;
   overflow-y: scroll;
-  height: 100%;
 }
 
 .feedback-form h3 {
@@ -103,6 +79,7 @@
 
 .feedback-text {
   min-width: 350px;
+  max-width: 500px;
   border-style: solid;
   border-width: 1px;
   border-color: #A0A0A0;
@@ -113,8 +90,10 @@
   box-shadow: 2px 2px 5px grey;
 }
 
-.feedback-text b {
-
+.feedback-scroll {
+  width: 475px;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 .feedback-info {
@@ -132,19 +111,4 @@
 
 .infoscroll  {
   font-size: 14px;
-}
-
-.feedback-scroll{
-  position: fixed;
-  display: inline-block;
-  overflow-y: scroll;
-  height: 95%;
-  width: 50%;
-}
-
-@media screen and (max-width: 640px) {
-    .feedback-scroll {
-        position: sticky;
-        width: 100%;
-    }
 }

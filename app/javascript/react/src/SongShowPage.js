@@ -4,6 +4,7 @@ import SongShowInfo from './SongShowInfo'
 import FeedbackTile from './FeedbackTile'
 import NavBar from './NavBar'
 import Access from './Access'
+import BurgerMenu from './BurgerMenu'
 
 class SongShowPage extends React.Component{
   constructor(props) {
@@ -128,11 +129,11 @@ class SongShowPage extends React.Component{
       if (this.state.currentUser) {
       return(
         <div>
-          <NavBar/>
+          <BurgerMenu/>
           <div className="song-home-margin">
-          <div className="row">
-            <div className="small-10 small-offset-1 medium-4 medium-offset-0 large-3 large-offset-0 columns ">
-              <div className="infoscroll">
+          {/* <div className="row"> */}
+            <div className="row small-up-2 medium-up-3 large-up-4">
+              <div className="column">
 
                 <SongShowInfo
                   key={this.state.song.id}
@@ -156,24 +157,22 @@ class SongShowPage extends React.Component{
                   currentUser={this.state.currentUser}
                 />
               </div>
-            </div>
-            <div className="columns">
               <div className="feedback-scroll">
                 {feedbacks}
               </div>
             </div>
           </div>
         </div>
-      </div>
+      // </div>
       )
     } else {
 
       return(
         <div>
-          <NavBar/>
+          <BurgerMenu/>
           <div className="song-home-margin">
-          <div className="row">
-            <div className="small-8 medium-6 large-3 columns">
+            <div className="row small-up-2 medium-up-3 large-up-4">
+              <div className="column">
                 <SongShowInfo
                   key={this.state.song.id}
                   id={this.state.song.id}
@@ -194,7 +193,6 @@ class SongShowPage extends React.Component{
                   text="Log in to give feedback. "
                 />
             </div>
-            <div className="small-8 medium-8 large-8 columns">
               <div className="feedback-scroll">
 
                 {feedbacks}
@@ -202,7 +200,6 @@ class SongShowPage extends React.Component{
             </div>
           </div>
         </div>
-      </div>
       )
     }
     }

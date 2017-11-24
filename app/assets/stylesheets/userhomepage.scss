@@ -1,44 +1,7 @@
 .user-home-page{
-  height: 90%;
-  width: 70%;
-  display: inline-block;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  font-size: 14px;
-}
-
-@media screen and (min-width: 1300px) {
-    .user-home-page {
-        position: fixed;
-    }
-}
-
-@media screen and (max-width: 1030px) {
-    .user-home-page {
-      width: 90%;
-    }
-}
-
-.user-song-container{
-  width: 70%;
-  margin: auto;
-  align-self: center;
-}
-
-@media screen and (max-width: 1030px) {
-    .user-song-container {
-      width: 50%;
-      margin: auto;
-      align-self: center;
-    }
-}
-@media screen and (max-width: 650px) {
-    .user-song-container {
-      width: 90%;
-      margin: auto;
-      align-self: center;
-      position:inherit;
-    }
+  height: 100%;
+  padding-top: 4em;
+  align-content: center;
+  justify-content: center;
+  overflow-y: scroll;
 }

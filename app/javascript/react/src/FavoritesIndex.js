@@ -2,6 +2,7 @@ import React from 'react';
 import SongContainer from './SongContainer'
 import NavBar from './NavBar'
 import Access from './Access'
+import BurgerMenu from './BurgerMenu'
 
 
 class FavoritesIndex extends React.Component{
@@ -38,14 +39,14 @@ class FavoritesIndex extends React.Component{
     if (this.state.currentUser.favorites) {
       return(
         <div className="home-index">
-          <NavBar/>
+          <BurgerMenu/>
 
           <SongContainer
             songs={this.state.songs}
           />
         </div>
       )
-    }else{  
+    }else{
       return(
         <div>
           <NavBar/>

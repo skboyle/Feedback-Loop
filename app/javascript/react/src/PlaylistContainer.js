@@ -6,7 +6,7 @@ const PlaylistContainer = props => {
   let playlist = props.feedbacks.reverse().map(feedback => {
     if (feedback.recomendations){
       return(
-        <div className="columns">
+        <div className="column">
           <PlaylistTile
             key={feedback.id}
             scode={feedback.recomendations}
@@ -17,7 +17,7 @@ const PlaylistContainer = props => {
   })
 
   return(
-    <div className="row small-up-2 large-up-3">
+    <div className="row small-up-2 medium-up-3 large-up-4">
         {playlist}
     </div>
   );

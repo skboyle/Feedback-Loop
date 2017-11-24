@@ -1,45 +1,50 @@
 .song-container{
   height: 100%;
-  width: 80%;
+  padding-top: 4em;
+
   text-align: center;
-  align-items: center;
-  display: inline-block;
   overflow-y: scroll;
-  align-self: right;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  margin-right: 40px;
+  // height: 100%;
+  // width: 80%;
+  // text-align: center;
+  // align-items: center;
+  // display: inline-block;
+  // overflow-y: scroll;
+  // align-self: right;
+  // margin-left: auto;
+  // margin-right: auto;
+  // margin-top: 40px;
+  // margin-right: 40px;
 }
+//
+// @media screen and (min-width: 1300px) {
+//     .song-container {
+//         position: fixed;
+//     }
+// }
+//
+// @media screen and (max-width: 1300px) {
+//     .song-container {
+//         position: fixed;
+//         width: 85%;
+//     }
+// }
+//
+// @media screen and (max-width: 800px) {
+//     .song-container {
+//         position: fixed;
+//         width: 80%;
+//     }
+// }
 
-@media screen and (min-width: 1300px) {
-    .song-container {
-        position: fixed;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .song-container {
-        position: fixed;
-        width: 85%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .song-container {
-        position: fixed;
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .song-container {
-        width: 90%;
-        margin-left: 35px;
-        position:inherit;
-        align-content: center;
-    }
-}
+// @media screen and (max-width: 600px) {
+//     .song-container {
+//         width: 90%;
+//         margin-left: 35px;
+//         position:inherit;
+//         align-content: center;
+//     }
+// }
 
 .song-tile{
   margin: auto;
@@ -49,7 +54,15 @@
 
 .columns{
     margin-bottom: 2em;
+    align-content: center;
+    justify-content: center;
 }
+.column{
+    margin-bottom: 2em;
+    align-content: center;
+    justify-content: center;
+}
+
 
 $grid-column-gutter: (
   small: 20px,

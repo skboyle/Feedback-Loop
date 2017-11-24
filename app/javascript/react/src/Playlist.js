@@ -1,6 +1,7 @@
 import React from 'react';
 import PlaylistContainer from './PlaylistContainer'
 import NavBar from './NavBar'
+import BurgerMenu from './BurgerMenu'
 
 
 class Playlist extends React.Component{
@@ -26,7 +27,7 @@ class Playlist extends React.Component{
   render() {
     return(
       <div className="home-index">
-        <NavBar/>
+        <BurgerMenu/>
         <div className="playlist-container">
           <PlaylistContainer
             feedbacks={this.state.feedbacks}

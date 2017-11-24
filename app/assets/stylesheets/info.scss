@@ -19,20 +19,3 @@
 #info-tile{
 width: 70%
 }
-
-@media screen and (max-width: 600px) {
-    #info-tile {
-        width: 100%;
-        word-wrap: break-word;
-
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .info-page {
-          font-size: 1em;
-          width:95%;
-          position:inherit;
-          align-content: center;
-    }
-}
