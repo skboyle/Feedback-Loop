@@ -9,7 +9,7 @@ Feedback Loop is a web app for music makers to improve their song writing skills
 - Postgresql
 
 ## Authors
-	•	Steven Boyle
+	SKBoyle
 
 ## Acknowledgments
 [Burger Menu](https://github.com/negomi/react-burger-menu) by Negomi
