@@ -1,5 +1,5 @@
 require "rails_helper"
-RSpec.describe Api::V1::feedbacksController, type: :controller do
+RSpec.describe Api::V1::FeedbacksController, type: :controller do
 
   let!(:skibuddy) {User.create(name: "skibud22", email: "skibuddy@aol.com")}
   let!(:jet) {Song.create(name: "Jet Plane", artist_name: "Lake Bird", description: "Dj tool with Alan Watts. Any tips for making this song more engaging?", genre: "House", song_url: "songsong.com", image_url: "www.skiward.com", user: skibuddy)}
@@ -12,18 +12,17 @@ RSpec.describe Api::V1::feedbacksController, type: :controller do
     it "should return a list of all of the Feedbacks" do
       get :index
       returned_json = JSON.parse(response.body)
-      songs = returned_json
+      feedbacks = returned_json
 
       expect(response.status).to eq 200
       expect(response.content_type).to eq("application/json")
 
-      expect(songs.length).to eq 2
-      expect(feedbacks[0]["name"]).to eq "Jet Plane"
-      expect(feedbacks[0]["artist_name"]).to eq "Lake Bird"
-      expect(feedbacks[0]["description"]).to eq "Dj tool with Alan Watts. Any tips for making this song more engaging?"
-      expect(feedbacks[0]["genre"]).to eq "House"
-      expect(feedbacks[0]["image_url"]).to eq "www.skiward.com"
-      expect(feedbacks[0]["song_url"]).to eq "songsong.com"
+      expect(feedbacks.length).to eq 2
+      expect(feedbacks[0]["user_id"]).to eq skibuddy.id
+      expect(feedbacks[0]["song_id"]).to eq jet.id
+      expect(feedbacks[0]["structure"]).to eq "wow"
+      expect(feedbacks[0]["mixdown"]).to eq "nice"
+      expect(feedbacks[0]["style"]).to eq "cool"
 
     end
   end
