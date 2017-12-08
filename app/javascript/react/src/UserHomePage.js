@@ -5,6 +5,7 @@ import SongShowInfo from './SongShowInfo'
 import NavBar from './NavBar'
 import SongContainer from './SongContainer'
 import HomeSongContainer from './HomeSongContainer'
+import UserSongs from './UserSongs'
 import Access from './Access'
 import BurgerMenu from './BurgerMenu'
 
@@ -29,7 +30,6 @@ class UserHomePage extends React.Component{
     })
     .then(response => response.json())
     .then(body => {
-      console.log(body)
       this.setState({
         feedbacks: body.feedbacks,
         songs: body.songs,
@@ -63,7 +63,7 @@ class UserHomePage extends React.Component{
     if (this.state.currentUser) {
       let songs = this.state.songs.map(song => {
         return(
-          <SongShowInfo
+          <UserSongs
             key={song.id}
             id={song.id}
             name={song.name}
@@ -95,10 +95,8 @@ class UserHomePage extends React.Component{
                 />
               </div>
               <div className="columns">
-              <div className="user-song-container">
-                  <HomeSongContainer
-                    songs={this.state.songs}
-                  />
+              <div className="user-songs">
+                {songs}
                 </div>
               </div>
             </div>

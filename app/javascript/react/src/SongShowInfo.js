@@ -18,7 +18,7 @@ const SongShowInfo = props => {
 
   return(
 
-    <div className="song-show-info">
+    <div className="site-form">
       <img className="song-tile-image" src={`${props.image_url}`} alt={`Picture of ${props.name}`}/>
       <h4> {props.name} By: <b>{props.artist_name}</b></h4>
       <p><b>Genre:</b> {props.genre}</p>

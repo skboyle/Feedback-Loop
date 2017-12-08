@@ -100,41 +100,41 @@ class FeedbackForm extends React.Component {
    }
 
     return (
-      <form className="feedback-form" id="feedback-form">
-        <h3>Give Feedback</h3>
+      <form className="site-form" id="site-form">
+        <h3 className="form-title" >GIVE FEEDBACK</h3>
         <div>
           {errors}
         </div>
         <TextAreaFormItem
           name="structure"
           content={this.state.structure}
-          nameText="Structure"
+          // nameText="Structure"
           handler={this.handleChange}
-          formText="Arrangement and energy."
+          formText="STRUCTURE:"
         />
 
         <TextAreaFormItem
           name="mixdown"
           content={this.state.mixdown}
-          nameText="Mixdown"
+          // nameText="Mixdown"
           handler={this.handleChange}
-          formText="Sound quality and levels."
+          formText="MIXDOWN:"
         />
 
         <TextAreaFormItem
           name="style"
           content={this.state.style}
-          nameText="Style"
+          // nameText="Style"
           handler={this.handleChange}
-          formText="Feel and technique."
+          formText="STYLE:"
         />
 
-        <FormItem
+        <TextAreaFormItem
           name="recomendations"
           content={this.state.recomendations}
-          nameText="Recomended Listening"
+          // nameText="Recomended Listening"
           handler={this.handleChange}
-          formText="Spotify URI (Optional)"
+          formText="Recomended:  (Spotify URI)"
         />
 
         <input type="submit" className="button" value="Submit " onClick={handleSubmit} />

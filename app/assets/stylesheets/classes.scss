@@ -20,8 +20,11 @@
 }
 
 iframe {
-  width: 97%;
+  width: 410px;
   min-width: 300px;
-  padding: 10px;
-  border: 0px;
+  padding: 0px;
+  margin-left: 10px;
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
 }

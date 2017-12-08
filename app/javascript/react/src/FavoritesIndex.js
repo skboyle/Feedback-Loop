@@ -49,7 +49,7 @@ class FavoritesIndex extends React.Component{
     }else{
       return(
         <div>
-          <NavBar/>
+          <BurgerMenu/>
           <div className="user-home-page">
             <Access
               text="Please log in to view favorites."

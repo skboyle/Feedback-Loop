@@ -1,23 +1,25 @@
 .song-home-margin{
   height: 100%;
-  padding-top: 4em;
+  padding-top: 10px;
   align-content: center;
   justify-content: center;
   overflow-y: scroll;
 }
 
 .song-tile-image {
-  width: 200px;
-  border-color: #A0A0A0;
+  width: 220px;
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
 }
 
 
 .song-show-info {
-  width: 200px;
+  width: 220px;
   color: black;
   box-shadow: 2px 2px 5px grey;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-color: #A0A0A0;
   background: white;
 }
@@ -50,9 +52,10 @@
 
 .feedback-tile {
   width: 450px;
-  border-color: lightgrey;
-  border-width: thin;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-top: 0px;
+
+  margin-bottom: 0px;
 }
 .feedback-form {
   padding: 2px;
@@ -78,20 +81,23 @@
 }
 
 .feedback-text {
-  min-width: 350px;
-  max-width: 500px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #A0A0A0;
-  padding-top: 10px;
-  background-color: white;
-  padding-left: 10px;
-  padding-right: 10px;
-  box-shadow: 2px 2px 5px grey;
+  // min-width: 350px;
+  // max-width: 500px;
+  // border-style: solid;
+  // border-width: 1px;
+  // border-color: #A0A0A0;
+  // padding-top: 10px;
+  // background-color: white;
+  // padding-left: 10px;
+  // padding-right: 10px;
+  padding: 10px;
+  outline-color: black;
+  outline-width: 2px;
+  outline-style: solid;
 }
 
 .feedback-scroll {
-  width: 475px;
+
   overflow-y: scroll;
   height: 100%;
 }
@@ -111,4 +117,10 @@
 
 .infoscroll  {
   font-size: 14px;
+}
+
+@media screen and (max-width: 500px) {
+    .song-home-margin {
+        padding-top: 50px;
+    }
 }

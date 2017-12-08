@@ -86,89 +86,7 @@ ul {
   list-style-type: none;
 }
 
-select{
-  border-width: 0px;
-  width:200px;
-  -moz-appearance: none;
-  appearance: none;
-  radius: 0px;
-  border-radius: 0px;
-  background-color: #FAFAFA;
-  -webkit-appearance: none;
-  color: #D3D3D3;
-}
 
-option{
-  border-width: 0px;
-  border-radius: 0px;
-  radius: 0px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: #FAFAFA;
-}
-option-placeholder{
-  border-radius: 0px;
-  radius: 0px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-.option-style{
-  border-width: 0px;
-  border-radius: 0px;
-  radius: 0px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: #FAFAFA;
-  font-family: 'Merriweather', serif !important;
-}
-
-select:focus{
-  outline-width: thin;
-  outline-color: black;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: #FAFAFA;
-}
-
-
-input{
-  background-color: #FAFAFA;
-  radius: 0px;
-  width: 196px;
-  border-width: 0px;
-}
-
-input[type=text] {
-  width: 196px;
-}
-
-input[type=text]:focus {
-  outline-width: thin;
-  outline-color:  #A0A0A0;
-  width: 196px;
-}
-
-::-webkit-input-placeholder {
-  color: lightgrey;
-}
-
-textarea {
-  height: 60px;
-  width: 196px;
-  resize: none;
-  background-color: #FAFAFA;
-  border-top-color:  #A0A0A0;
-  border-bottom-color:  #A0A0A0;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-width: 0px;
-}
-
-textarea:focus{
-  outline-width: 1px;
-  outline-color:  #A0A0A0;
-}
 
 .red {
   background-color: red;
@@ -185,6 +103,7 @@ textarea:focus{
 
 input.button {
   padding-left: none;
+  
 }
 
 .button:focus {outline:0;}

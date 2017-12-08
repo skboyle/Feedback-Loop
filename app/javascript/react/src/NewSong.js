@@ -124,53 +124,52 @@ class NewSong extends React.Component{
 
     return (
       <form className="site-form" id="song-form">
-        <h3>Add A Song</h3>
+        <h3 className="form-title">ADD A SONG</h3>
         <div>
           {errors}
         </div>
         <FormItem
           name="name"
           content={this.state.name}
-          nameText="Song Name"
+          formText="Song Name"
           handler={this.handleChange}
         />
 
         <FormItem
           name="artist_name"
           content={this.state.artist_name}
-          nameText="Artist Name"
+          formText="Artist Name"
           handler={this.handleChange}
         />
 
         <DropDown
           name="genre"
           content={this.state.genre}
-          nameText="Genre"
+          formText="Genre"
           handler={this.handleChange}
         />
 
         <FormItem
           name="song_url"
           content={this.state.song_url}
-          nameText="Song URL"
+          // formText="Song URL"
           handler={this.handleChange}
-          formText="Use full URL"
+          formText="Song URL"
         />
 
         <FormItem
           name="image_url"
           content={this.state.image_url}
-          nameText="Image URL"
+          formText="Image URL"
           handler={this.handleChange}
-          formText="Use full URL (Optional)"
         />
 
         <TextAreaFormItem
           name="description"
           content={this.state.description}
-          nameText="Description"
+          formText="Description"
           handler={this.handleChange}
-          formText="Tell us about your song. What would you like help on?"
+
         />
 
         <input type="submit" className="button" value="Submit " onClick={handleSubmit} />
