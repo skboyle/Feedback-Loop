@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
+import ReactPlayer from 'react-player';
+
+
 
 const SongShowInfo = props => {
 
@@ -22,6 +25,8 @@ const SongShowInfo = props => {
       <img className="song-tile-image" src={`${props.image_url}`} alt={`Picture of ${props.name}`}/>
       <h4> {props.name} By: <b>{props.artist_name}</b></h4>
       <p><b>Genre:</b> {props.genre}</p>
+      <div className="audio-player">
+    </div>
           <a target="_blank" href={props.song_url}><b>Listen</b></a>
            &nbsp;
           <button
